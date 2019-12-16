@@ -1,16 +1,26 @@
 @charset "utf-8";
+
 body {
   font-size: 12px;
 }
 
 /* 通用样式 */
 
-.topheadderCon, .bottomheaderCon, .navBox {
+.topheadderCon,
+.bottomheaderCon,
+.navBox,
+.footerTop,
+.footerBottom,
+.bottomBox {
   width: 1200px;
   margin: 0 auto;
 }
 
-.topheader, .biglogo, .bottomheader, .nav {
+.topheader,
+.biglogo,
+.bottomheader,
+.nav,
+.footer {
   min-width: 1200px;
 }
 
@@ -321,7 +331,7 @@ body {
   border-color: rgb(204, 0, 0);
   border-top: 0;
   position: absolute;
-  z-index: -1;
+  z-index: 2;
 }
 
 .sortBox li {
@@ -329,10 +339,12 @@ body {
   height: 81px;
   border-bottom: 1px solid #e4e4e4;
   border-left: 3px solid #fff;
+  overflow: hidden;
 }
 
 .liarticlebg {
-  background: rgb(196, 192, 195);
+  background: #F1F1F1;
+  color: #fff;
 }
 
 .sortBox li:nth-of-type(6) {
@@ -366,6 +378,7 @@ body {
 
 .sortBox p {
   line-height: 20px;
+  padding: 0 22px;
 }
 
 .sortBox p a {
@@ -390,14 +403,14 @@ body {
   height: 470px;
   float: left;
   display: block;
-  background: rgb(196, 192, 195);
+  background: #F1F1F1;
   overflow: hidden;
 }
 
 .menuItemTitle {
   width: 100px;
   float: left;
-  background: rgb(196, 192, 195);
+  background: #F1F1F1;
 }
 
 .menuCon-list {
@@ -439,4 +452,229 @@ body {
   height: 470px;
   float: right;
   background: pink;
+}
+
+/* 内容区 */
+.main {
+  min-height: 600px;
+  background-color: pink;
+}
+
+/* 页脚 */
+footer {
+  background-color: #f9f9f9;
+}
+
+.topBox {
+  width: 100%;
+  background-color: #333;
+}
+
+.footerTop {
+
+  margin: 0 auto;
+  height: 84px;
+  border-bottom: 1px solid #494949;
+}
+
+.footerBottom {
+
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 30px 0 60px;
+}
+
+.footerTop .footerContact {
+  float: left;
+  height: 40px;
+  line-height: 40px;
+  padding: 22px 0px;
+}
+
+.footerContact i {
+  float: left;
+  display: block;
+  width: 40px;
+  height: 40px;
+  margin-right: 18px;
+  background: url(../images/public-24.png)no-repeat;
+  background-position: -144px -22px;
+}
+
+.footerContact b {
+  float: left;
+  font-size: 24px;
+  color: #c00;
+  margin-right: 25px;
+
+}
+
+.footerContact span {
+  float: left;
+  display: block;
+  font-size: 14px;
+  color: #fff;
+  margin-right: 8px;
+  line-height: 40px;
+}
+
+.footerTop .footerTopRight {
+  float: right;
+  height: 32px;
+  padding: 26px 0;
+}
+
+.footerTopRight .ftRight-tit {
+  float: left;
+  line-height: 32px;
+  color: rgb(255, 255, 255);
+  padding-right: 10px;
+}
+
+.footerTopRight .ftRight-form {
+  float: left;
+  width: 240px;
+  height: 30px;
+  border: 1px solid #494949;
+  position: relative;
+  z-index: 99;
+}
+
+.footerTopRight .ftRight-form input {
+  width: 190px;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 6px;
+  background: 0;
+  border: 0;
+  float: left;
+  color: #fff;
+  outline: 0;
+}
+
+.footerTopRight .ftRight-form span {
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+  color: #999;
+  position: absolute;
+  left: 6px;
+  top: 0;
+}
+
+.footerTopRight .ftRight-form i {
+  display: block;
+  width: 22px;
+  height: 18px;
+  background-position: -133px 0;
+  margin: 6px 0 0 10px;
+  cursor: pointer;
+  float: left;
+}
+
+.footerBottom {
+  overflow: hidden;
+  padding: 30px 0 60px;
+}
+
+.footerBottom ul li {
+  float: left;
+  padding: 10px;
+  margin-right: 56px;
+  
+}
+.footerBottom ul li h3{
+  color: #fff;
+  
+}
+.footerBottom ul li span{float: left;
+  display: block;
+  padding-left: 8px;
+  padding-bottom: 8px;
+}
+
+.footerBottom ul li i {
+  float: left;
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  background: url(../images/public-24.png)no-repeat 0 -131px;
+}
+
+.footerBottom ul li p {
+  padding-left: 35px;
+  color: #ccc;
+  line-height: 30px;
+}
+.footerBottom .liz{
+  margin: 0;
+  color: #fff;
+}
+.footerBottom .liz span{
+  padding-top: 5px;
+}
+.footerBottom ul li div {
+  height: 40px;
+  
+}
+.footerBottom .rightFont1{
+  float: left;
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  background:url(../images/public-24.png)no-repeat -140px -74px;
+}
+.footerBottom .rightFont2{
+  float: left;
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  background:url(../images/public-24.png)no-repeat -103px -74px;
+}
+
+.bottomBox{
+  margin-top: 20px;
+}
+.bottomBoxLeft{
+  float: left;
+  height: 200px;
+  width: 780px;
+
+}
+.bottomBoxRight{
+  width: 340px;
+  height: 200px;
+  float: left;
+}
+.bottomBoxLeft p{
+  padding: 10px;
+  color: #999;
+  height: 16px;
+}
+.bottomBoxLeft .yz{
+  height: 40px;
+}
+.bottomBoxLeft p span{
+  display: block;
+  
+  float: left;
+  margin-right: 10px;
+}
+.bottomBoxLeft .xp{
+  float: none;
+}
+.bottomBoxRight p{
+  width: 100px;
+  height: 100px;
+  padding-top: 10px;
+}
+.bottomBoxRight p img{
+  width: 100%;
+  height: 100%;
+}
+.bottomBoxRight div{
+  float: left;
+  margin-right: 40px;
+  margin-top: 30px;
+  text-align: center;
 }

@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/subpage.css">
   <script src="js/jquery-3.4.1.js"></script>
+  <script src="../server/sidebar.json"></script>
+  <script src="js/subpage.js"></script>
 </head>
 
 <body>
@@ -128,64 +130,8 @@
     <div class="navBox">
       <div class="shoppingSort">
         <h2>全部商品分类</h2>
-        <ul class="sortBox">
-          <li>
-            <h3 class="sortCon"><i></i><a href="">一键选酒</a></h3>
-            <p>
-              <a href="">整箱购</a>
-              <a href="">家乡名酒</a>
-              <a href="">家乡名酒</a>
-            </p>
-            <p>
-              <a href="">地域名酒</a>
-              <a href="">值得买</a>
-              <a href="">实惠大坛</a>
-            </p>
-          </li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
+        <ul class="sortBox" style="display: none;">
         </ul>
-        <div class="menuBox " style="display: block;">
-          <div class="menuCon">
-            <!-- 左侧文字 start -->
-            <div class="menuItemTitle">
-              <h4>特色会场</h4>
-            </div>
-            <div class="menuCon-list">
-              <p class="clearfix">
-                <a href="#">整箱购</a><s>|</s>
-                <a href="#">精品酒铺</a><s>|</s>
-                <a href="#">家乡名酒</a><s>|</s>
-                <a href="#">老酒特卖</a><s>|</s>
-                <a href="#">实惠大坛</a><s>|</s>
-                <a href="#">有礼有面</a><s>|</s>
-                <a href="#">海外直采</a>
-              </p>
-            </div>
-            <div class="menuItemTitle">
-              <h4>特色会场</h4>
-            </div>
-            <div class="menuCon-list">
-              <p class="clearfix">
-                <a href="#">整箱购</a><s>|</s>
-                <a href="#">精品酒铺</a><s>|</s>
-                <a href="#">家乡名酒</a><s>|</s>
-                <a href="#">老酒特卖</a><s>|</s>
-                <a href="#">实惠大坛</a><s>|</s>
-                <a href="#">有礼有面</a><s>|</s>
-                <a href="#">海外直采</a>
-              </p>
-            </div>
-          </div>
-          <!-- 右侧广告位 start -->
-          <div class="menuFoc">
-            <a href="#"><img title="" alt="" src="images/18af3dddcb4144489da9f368187b387b.jpg">
-            </a>
-          </div>
-        </div>
       </div>
       <ul class="navLeft">
         <li><a href="#">首页</a></li>
@@ -214,87 +160,163 @@
     </section>
     <!-- 页尾 -->
     <footer>
+      <div class="topBox">
+        <div class="footerTop">
+          <div class="footerContact">
+            <i class="publicIcon"></i>
+            <b>400-617-9999</b>
+            <span>客服热线</span>
+            <span>9:00-23:00</span>
+            <span>贴心服务</span>
+          </div>
+          <div class="footerTopRight">
+            <div class="ftRight-tit">优惠促销早知道</div>
+            <div class="ftRight-form">
+              <input id="subscribe_email" type="text">
+              <span>请输入您的邮箱地址</span>
+              <i class="publicIcon" id="subscribe_but"></i>
+            </div>
+          </div>
+        </div>
+        <div class="footerBottom">
+          <ul>
+            <li>
+              <h3>
+                <i></i>
+                <span>新手入门</span>
+              </h3>
+              <p>购物保障</p>
+              <p>服务协议</p>
+              <p>发票说明</p>
+            </li>
+            <li>
+              <h3>
+                <i></i>
+                <span>新手入门</span>
+              </h3>
+              <p>购物保障</p>
+              <p>服务协议</p>
+              <p>发票说明</p>
+            </li>
+            <li>
+              <h3>
+                <i></i>
+                <span>新手入门</span>
+              </h3>
+              <p>购物保障</p>
+              <p>服务协议</p>
+              <p>发票说明</p>
+            </li>
+            <li>
+              <h3>
+                <i></i>
+                <span>新手入门</span>
+              </h3>
+              <p>购物保障</p>
+              <p>服务协议</p>
+              <p>发票说明</p>
+            </li>
+            <li>
+              <h3>
+                <i></i>
+                <span>新手入门</span>
+              </h3>
+              <p>购物保障</p>
+              <p>服务协议</p>
+              <p>发票说明</p>
+            </li>
+            <li class="liz">
+              <div>
+                <i class="rightFont1"></i>
+                <span>酒仙新浪微博</span>
+              </div>
+              <div>
+                <i class="rightFont2"></i>
+                <span>酒仙微信</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="bottomBox">
+        <div class="bottomBoxLeft">
+          <p>公司简介|管理团队|媒体报道|联系我们|友情链接|网站地图|品牌大全</p>
+          <p>北京酒仙网络科技有限公司◎酒仙网2011jiuxian.com All Rights Reserved 京ICP备17043395号京公网安备1101050188221</p>
+          <p>酒仙网白酒1酒仙网葡萄酒|开放平台招商|酒仙网团购|更多</p>
+          <p>统一社会信用代码91110302306646672B食品流通许可证编号JY11131010328793京食药网食备201910019</p>
+          <p>地址：北京市北京经济技术开发区经海五路58号院8幢4层
+          </p>
+          <p class="yz"><span><a href=""><img src="https://rr.knet.cn/static/images/logo/cnnic.png" alt=""></a></span>
+            <span><a href=""><img src="http://misc.jiuxian.com/img/newIndexImg/copyBot03.jpg" alt=""></a></span></p>
+          <p class="xp">购买前请确认达到法定饮酒年龄！酒仙网不销售任何含酒精产品给18岁以下人士！</p>
+        </div>
+        <div class="bottomBoxRight">
+          <div>
+            <p>
+              <img src="http://misc.jiuxian.com/img/newIndexImg/jxPho-code.jpg" alt="">
 
+            </p>
+            <p>手机酒仙网</p>
+          </div>
+          <div>
+            <p>
+              <img src="http://misc.jiuxian.com/img/newIndexImg/jx-wxgzh.png" alt="">
+
+            </p>
+            <p>微信公众号</p>
+          </div>
+
+        </div>
+      </div>
     </footer>
 
 
 
     <script>
-      var list = [];
-      var oDiv = Array.from($(".floor"))
-      oDiv.splice(1, 1);
-      oDiv.splice(3, 1);
-      oDiv.splice(6, 1);
+      //获取数据
+      // var arr = [];
+      // for (i = 0; i < $(".catItem").length; i++) {
+      //   var obj = {
+      //     leftName1: "",
+      //     leftName2: "",
+      //     rightName1: "",
+      //     rightName2: "",
+      //     src: ""
+      //   };
+      //   obj.leftName1 = $(".catItemCon h3")[i].innerText;
+      //   // obj.leftName2 =$(".catItem .categoryCon")[i].children.innerText;
+      //   var arr1 = [];
+      //   for (k = 0; k < $(".catItem .categoryCon").eq(i).children().find("a").length; k++) {
+      //     arr1.push($(".catItem .categoryCon").eq(i).children().find("a").eq(k).text());
+      //   }
+      //   var s1 = $(".catItem").parent().siblings(".menuBox").children(".menuCon").eq(i).find("h4").map(function (index,
+      //     ele) {
+
+      //       return obj.rightName1 = ele.innerText;
 
 
-      for (var i = 0; i < oDiv.length; i++) {
-        var arr = [];
-        for (var n = 0; n < oDiv[i].children.length; n++) {
-          var obj = {
-            title: {
-              name: "",
-              keyword: ""
-            },
-            content: {
-              left: {
-                src: "",
-                name: "",
-                des: ""
-              },
-              right: ""
-            }
-          };
-          obj.title.name = oDiv[i].children[0].children[0].children[0].children[1].innerText;
-          var arr1 = [];
-          for (var k = 0; k < oDiv[i].children[n].children[0].children[1].children.length; k++) {
-            arr1.push(oDiv[i].children[n].children[0].children[1].children[k].innerText)
-          };
-          obj.title.keyword = arr1;
-          obj.content.left.src = oDiv[i].children[n].children[1].children[0].children[0].src;
-          obj.content.left.name = oDiv[i].children[n].children[1].children[0].children[2].innerText;
-          obj.content.left.des = oDiv[i].children[n].children[1].children[0].children[3].innerText;
-          var right = $(".floor")[0].children[0].children[1].children[1].children;
-          var arr2 = [];
-          for (var j = 0; j < right.length; j++) {
-            var arr3 = [];
-            arr3.push(right[j].children[0].children[0].innerText);
-            arr3.push(right[j].children[0].children[1].innerText);
-            arr3.push(right[j].children[1].children[0].src);
-            arr2.push(arr3)
-          }
-          obj.content.right = arr2
-          arr.push(obj)
-        };
-        list.push(arr)
-      }
-      list = JSON.stringify(list);
-      console.log(list);
-      console.log(list);
+      //   })
+      //   var s2 = $(".catItem").parent().siblings(".menuBox").children(".menuFoc").eq(i).find("img").map(function (index,
+      //     ele) {
+      //     return obj.src = ele.src;
+      //   })
+      //   var s3 = $(".catItem").parent().siblings(".menuBox").children(".menuCon").eq(i).find("a").map(function (index,
+      //     ele) {
+
+      //       return obj.rightName2 = ele.innerText;
+
+      //   })
 
 
+      //   obj.rightName1 =Array.from(s1);
+      //   obj.src = s2[0];
+      //   obj.rightName2 =Array.from(s3);
+      //   obj.leftName2 = arr1;
+      //   arr.push(obj);
+      // }
+      // console.log(arr);
 
-
-      var arr = [];
-      $(".categoryBox h3").map(function (index, ele) {
-        var obj = { name1: "", name2: "" };
-        if (typeof (ele.innerText) == "string") {
-          obj.name1 = ele.innerText;
-        }
-        arr.push(obj);
-        var arr1 = [];
-        for (var i = 0; i <= index; i++) {
-          arr1.push($(ele).siblings(".categoryCon")[0])
-        }
-        for (var i = 0; i <= arr1.length; i++) {
-          if (arr1[i] != undefined) {
-            obj.name2 = arr1[i].innerText;
-          }
-          console.log(obj.splice(""));
-
-          arr.push(obj);
-        }
-      })
-      console.log(arr);
+      // JSON.stringify(arr);
     </script>
 
 </body>
