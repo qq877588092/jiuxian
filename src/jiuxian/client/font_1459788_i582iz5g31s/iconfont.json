@@ -1,0 +1,30 @@
+{
+  "id": "1459788",
+  "name": "ming",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "6250626",
+      "name": "箭头左",
+      "font_class": "jiantouzuo",
+      "unicode": "e710",
+      "unicode_decimal": 59152
+    },
+    {
+      "icon_id": "6250633",
+      "name": "箭头右",
+      "font_class": "jiantouyou",
+      "unicode": "e715",
+      "unicode_decimal": 59157
+    },
+    {
+      "icon_id": "6371491",
+      "name": "profile/下拉按钮",
+      "font_class": "Rectangle-path",
+      "unicode": "e633",
+      "unicode_decimal": 58931
+    }
+  ]
+}

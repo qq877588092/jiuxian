@@ -1,0 +1,419 @@
+@charset "utf-8";
+body {
+  background: #fafafa;
+}
+
+/* 通用样式 */
+
+.headerBox, .main-box, .jx-foot {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.box {
+  width: 100%;
+  background: #fafafa;
+  min-width: 1000px;
+}
+
+.top-header {
+  width: 100%;
+  height: 88px;
+  background: #Fff;
+  box-shadow: 1px 6px 14px #ccc;
+  z-index: 6;
+  position: relative;
+}
+
+.head-logo {
+  width: 257px;
+  height: 63px;
+  padding-top: 12.5px;
+  float: left;
+}
+
+.head-logo p {
+  float: left;
+}
+
+.head-logo p a {
+  display: block;
+  width: 140px;
+  height: 63px;
+}
+
+.head-logo-src {
+  float: right;
+}
+
+.head-reg {
+  float: right;
+  color: #999;
+  margin-top: 48px;
+  height: 14px;
+  line-height: 14px;
+  font-size: 12px;
+}
+
+.head-nav {
+  width: 85px;
+  float: right;
+  margin: 46px 0 0 20px;
+  font-size: 12px;
+  color: #666;
+  text-align: center;
+}
+
+.head-nav-ul {
+  padding-top: 4px;
+  z-index: 8;
+}
+
+.head-nav-ul li {
+  border-top: 1px dotted #ccc;
+  height: 24px;
+  line-height: 24px;
+  background: #fff;
+  padding-right: 16px;
+  z-index: 8;
+}
+
+.head-nav-ul li a {
+  color: #999;
+}
+
+.active {
+  background: #ffdddd !important;
+}
+
+/*内容*/
+
+.main {
+  background: url(../images/bg.jpg)repeat-x scroll left top;
+  width: 100%;
+  padding: 70px 0 0px;
+  height: 600px;
+  z-index: 1;
+}
+
+.main-form {
+  background: #fff;
+  border: 3px solid #eaeaea;
+  height: 500px;
+  border-radius: 5px;
+  box-shadow: 1px 6px 11px #e4e4e4;
+  position: relative;
+}
+
+.main-top {
+  width: 280px;
+  height: 34px;
+  position: absolute;
+  right: 0px;
+  top: -36px;
+  text-align: center;
+  line-height: 34px;
+}
+
+.main-top a {
+  float: right;
+  display: block;
+  width: 120px;
+  height: 34px;
+  background: #FF9900;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  color: #fff;
+  border: 2px solid #eaeaea;
+  border-bottom: none;
+}
+
+.main-top .pu {
+  float: none;
+  margin-left: 30px;
+}
+
+.UA {
+  position: relative;
+  width: 300px;
+  height: 34px;
+  content: ".";
+  clear: both;
+  display: block;
+  margin-left: 65px;
+}
+
+.regAgrInput {
+  position: relative;
+  left: 62px;
+  top: -2px;
+}
+
+.user-ua {
+  display: block;
+  float: right;
+  font-size: 12px;
+  color: #999;
+}
+
+.main-bottom {
+  width: 470px;
+  margin: 60px 0 0 280px;
+}
+
+.ipone {
+  text-align: right;
+  width: 100px;
+  float: left;
+  height: 42px;
+  line-height: 42px;
+  padding-right: 26px;
+}
+
+.loginName {
+  float: left;
+  width: 268px;
+  height: 42px;
+  margin-bottom: 20px;
+  border: 1px solid #dcdcdc;
+}
+
+.leftFont {
+  width: 43px;
+  height: 42px;
+  position: absolute;
+}
+
+.userIcon1 {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: url(../images/regLogin-8.png)no-repeat -51px 0px !important;
+  margin: 10px 10px 0 10px;
+}
+
+.userIcon2 {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin: 10px 10px 0 10px;
+  background: url(../images/regLogin-8.png)no-repeat -426px 0px !important;
+}
+
+.userIcon3 {
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin: 10px 10px 0 10px;
+  background: url(../images/regLogin-8.png)no-repeat -264px 1px !important;
+}
+
+.userIcon4 {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin: 10px 10px 0 10px;
+  background: url(../images/regLogin-8.png)no-repeat -83px 0px !important;
+}
+
+.userIcon5 {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin: 10px 10px 0 10px;
+  background: url(../images/regLogin-8.png)no-repeat -83px 0px !important;
+}
+
+#captcha1 {
+  z-index: 5;
+  position: absolute;
+  top: 124px;
+  right: 318px;
+  color: #666;
+}
+
+.loginName input {
+  width: 173px;
+  height: 42px;
+  padding: 0 45px 0 50px;
+  border: 0;
+  margin-right: 20px;
+}
+
+.UA .regAgrInput {
+  width: 13px;
+  height: 13px;
+}
+
+.loginBtn {
+  width: 270px;
+  background-color: #e10303;
+  border-radius: 2px;
+  border: 0;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  margin-left: 126px;
+}
+
+.loginBtn input {
+  font-size: 18px;
+  background-color: #e10303;
+  color: #fff;
+}
+
+.mistakeTip {
+  background-color: #ed787f;
+  padding: 0 10px;
+  height: 20px;
+  color: #fff;
+  line-height: 20px;
+  position: absolute;
+  bottom: 383px;
+  right: 318px;
+  z-index: 5;
+  font-size: 12px;
+}
+
+.activeColor {
+  border-color: #ff6666 !important;
+}
+
+.mistakeTip2 {
+  background-color: #ed787f;
+  padding: 0 10px;
+  height: 20px;
+  color: #fff;
+  line-height: 20px;
+  position: absolute;
+  bottom: 383px;
+  right: 318px;
+  z-index: 88;
+  font-size: 12px;
+  bottom: 210px;
+  right: 40px;
+  background: #ccc;
+}
+
+.mistakeTip3 {
+  z-index: 888;
+  bottom: 320px;
+  right: 318px;
+}
+
+.mistakeTip4 {
+  z-index: 888;
+  bottom: 254px;
+  right: 318px;
+}
+
+.mistakeTip5 {
+  z-index: 888;
+  bottom: 254px;
+  right: 318px;
+}
+
+.mistakeTip6 {
+  z-index: 888;
+  bottom: 190px;
+  right: 318px;
+}
+
+.delInput {
+  display: none;
+  width: 15px;
+  height: 15px;
+  background: url(../images/regLogin-8.png)no-repeat -162px 0px !important;
+  position: absolute;
+  left: 246px;
+  top: 15px;
+}
+
+.duidelInput {
+  display: block !important;
+  background-position: -139px 0 !important;
+}
+
+/* 尾部 */
+
+.jx-foot {
+  margin: 50px auto;
+  text-align: center;
+}
+
+.jx-foot a {
+  color: #333;
+}
+
+.jx-foot p {
+  font-size: 12px;
+  line-height: 30px;
+  color: #333;
+}
+
+.jx-foot .red {
+  font-size: 12px;
+  color: #ff0000;
+}
+
+.ewmCon {
+  width: 270px;
+  margin-left: 40px;
+}
+
+.ewmCon h2 {
+  height: 70px;
+  line-height: 70px;
+  font-size: 16px;
+  color: #666;
+}
+
+.scanError .scanErrorEwm {
+  width: 150px;
+  height: 150px;
+  margin: 20px auto 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.scanErrorTip {
+  margin-left: 68px;
+}
+
+.scanErrorTip i {
+  display: block;
+  width: 33px;
+  height: 33px;
+  background: url(../images/regLogin-8.png)no-repeat -270px -150px !important;
+  float: left;
+  font-size: 14px;
+}
+
+.ewmCon .scanError .scanErrorTip p {
+  float: left;
+  color: #999;
+  line-height: 16px;
+  text-align: left;
+  font-size: 12px;
+}
+
+.ewmCon .scanError .scanErrorTip p em {
+  color: #e4393c;
+  font-style: normal;
+}
+
+.ewmCon .scanError .sCanErroLink {
+  padding-top: 50px;
+  text-align: right;
+}
+
+.ewmCon .scanError .sCanErroLink a {
+  font-size: 12px;
+  padding-left: 10px;
+  color: #333;
+}
+
+.ewmCon .scanError .sCanErroLink {
+  padding-top: 75px;
+  text-align: right;
+}

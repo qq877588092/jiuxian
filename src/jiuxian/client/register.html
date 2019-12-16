@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="font_1459788_i582iz5g31s/iconfont.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/register.css">
+  <script src="js/captcha.js"></script>
+  <script src="js/jquery-3.4.1.js"></script>
+</head>
+
+<body>
+  <div class="box">
+    <!-- 页眉 -->
+    <header class="top-header">
+      <div class="headerBox">
+        <div class="head-logo">
+          <p style="background: url(images/logo.png)no-repeat;">
+            <a class="head-logo-a" target="_blank" href="#"></a>
+          </p>
+          <a class="head-logo-src" href="javascript:;">
+            <img src="images/slogan.jpg" alt="">
+          </a>
+        </div>
+        <div class="head-nav">
+          <div>
+            <i>帮助中心</i>
+            <span class="iconfont icon-Rectangle-path"></span>
+          </div>
+          <ul class="head-nav-ul" style="display: none;z-index: 888;">
+            <li class="active"><a href="javascript:;">配送说明</a> </li>
+            <li><a href="javascript:;">支付方式</a></li>
+            <li><a href="javascript:;">售后服务</a></li>
+            <li><a href="javascript:;">企业客户</a></li>
+          </ul>
+        </div>
+        <div class="head-reg">
+          <span>欢迎来到酒仙网！</span>
+          <a href="#">请登录</a>
+        </div>
+      </div>
+    </header>
+    <!-- 内容 -->
+    <div class="main">
+      <div class="main-box">
+        <div class="main-form">
+          <div class="main-top">
+            <a class="eu" href="">企业用户注册</a>
+            <a style="background: #fff;color:#ff9900" class="pu" href="">个人用户注册</a>
+          </div>
+          <div class="main-bottom">
+            <div class="ipone">手机号</div>
+            <div class="loginName">
+              <div class="leftFont">
+                <i class="userIcon1"></i>
+                <i class="delInput"></i>
+              </div>
+              <input class="userName userphone" type="text">
+              <div class="mistakeTip mistakeTip1" style="display:none">请输入手机号</div>
+              <div class="mistakeTip2" style="display:none;">请输入11位手机号</div>
+            </div>
+            <div class="ipone">验证码</div>
+            <div class="loginName">
+              <div class="leftFont">
+                <i class="userIcon2 userNzm"></i>
+              </div>
+              <input class="userName user-yzm" type="text">
+              <div class="mistakeTip mistakeTip3" style="display:none">请输入验证码</div>
+              <div class="yzmError" style="display:none">验证码错误</div>
+              <canvas width="80" height="43" id="captcha1"></canvas>
+            </div>
+            <!-- <div class="ipone">校验码</div>
+            <div class="loginName">
+              <div class="leftFont">
+                <i class="userIcon3"></i>
+                <i class="delInput"></i>
+              </div>
+              <input class="userName" type="text">
+              <div class="mistakeTip mistakeTip4" style="display:none">请输入校验码</div>
+            </div> -->
+            <div class="ipone">设置密码</div>
+            <div class="loginName">
+              <div class="leftFont">
+                <i class="userIcon4"></i>
+                <i class="delInput"></i>
+              </div>
+              <input class="userName userpwd1" type="password">
+              <div class="mistakeTip mistakeTip5" style="display:none">请输入密码</div>
+            </div>
+            <div class="ipone">确认密码</div>
+            <div class="loginName">
+              <div class="leftFont">
+                <i class="userIcon5"></i>
+                <i class="delInput"></i>
+              </div>
+              <input class="userName userpwd2" type="password">
+              <div class="mistakeTip mistakeTip6" style="display:none">请再次输入密码</div>
+            </div>
+            <div class="UA">
+              <input class="regAgrInput" type="checkbox" checked="checked">
+              <a class="user-ua" href="">我已阅读并同意 《酒仙网用户注册协议》</a>
+            </div>
+            <div class="loginBtn">
+              <input type="button" value="立&nbsp;&nbsp;即&nbsp;&nbsp;注&nbsp;&nbsp;册">
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!-- 页脚 -->
+    <footer>
+      <div class="jx-foot">
+        <p>© &nbsp;酒仙网&nbsp; 2011 jiuxian.com All &nbsp;Rights Reserved&nbsp;&nbsp;<a target="_blank"
+            href="#">京ICP证110141号</a>&nbsp;&nbsp;京公网安备1101050188221</p>
+        <p class="red">购买前请确认达到法定饮酒年龄！酒仙网不销售任何含酒精产品给18岁以下人士！</p>
+      </div>
+    </footer>
+  </div>
+  <script>
+    $(() => {
+      //测试用
+      $(".userphone").val("13413312659");
+      $(".userpwd1").val("w1234");
+      $(".userpwd2").val("w1234");
+
+      //右上下拉菜单
+      $(".head-nav").mouseover(function () {
+        $(this).children(".head-nav-ul").css({
+          display: "block"
+        });
+        $(this).children(".head-nav-ul").children("li").mouseover(function () {
+          $(this).addClass("active").siblings().removeClass("active");
+        })
+      })
+      $(".head-nav").mouseout(function () {
+        $(this).children(".head-nav-ul").children("li").eq(0).addClass("active").siblings()
+          .removeClass(
+            "active");
+        $(this).children(".head-nav-ul").css({
+          display: "none"
+        });
+      })
+      //验证码
+      let captcha1 = new Captcha({
+        dotNum: 10,
+        lineNum: 20,
+        fontSize: 26,
+        length: 4,
+      });
+      let code;
+      captcha1.draw(document.querySelector('#captcha1'), r => {
+        console.log(r, '验证码1');
+        code = r.toUpperCase();
+      });
+      /* 表单验证：监听对应的输入框失去焦点事件，当失去焦点的时候检查是否满足规则，如果不满足规则那么就提示！！！ */
+      //手机号
+      function userElse(item) {
+        item.siblings(".leftFont").children(".delInput").removeClass("duidelInput");
+        item.siblings(".leftFont").children(".delInput").show();
+        item.siblings(".mistakeTip").show();
+        item.parent().addClass("activeColor");
+      }
+
+      function userTrue(item) {
+        item.siblings(".leftFont").children(".delInput").addClass("duidelInput");
+        item.siblings(".mistakeTip").hide();
+        item.parent().removeClass("activeColor");
+      }
+
+      $(".userphone").blur(function () {
+        let regex = /^[1][3-9]\d{9}$/;
+        if (regex.test($.trim($(this).val())) == true) {
+          userTrue($(this));
+        } else {
+          userElse($(this));
+        }
+      })
+      //验证码
+      $(".user-yzm").blur(function () {
+        if ($.trim($(this).val()).toUpperCase() == code) {
+          $(this).parent().removeClass("activeColor");
+          $(this).siblings(".mistakeTip3").hide();
+        } else {
+          $(this).parent().addClass("activeColor");
+          $(this).siblings(".mistakeTip3").show();
+        }
+      });
+
+
+      //密码
+      $(".userpwd1").blur(function () {
+        let regex = /^[a-zA-Z0-9.]{3,6}$/;
+        if (regex.test($.trim($(this).val())) == true) {
+          userTrue($(this));
+        } else {
+          userElse($(this));
+        }
+      })
+      //确认密码
+      $(".userpwd2").blur(function () {
+        if ($.trim($(this).val()) == $.trim($(".userpwd1").val()) && $(this).val() != 0) {
+          userTrue($(this));
+        } else {
+          userElse($(this));
+        }
+      })
+      //鼠标获得焦点去掉提示
+      $(".userName").focus(function () {
+        $(this).siblings(".mistakeTip").hide();
+        $(this).parent().removeClass("activeColor");
+        $(this).siblings(".leftFont").children(".delInput").hide();
+      })
+    })
+
+    /* 注册的思路： */
+    /* (1) 先获取按钮，添加点击事件 */
+    /* (2) 检查用户名等所有信息是否都已经正确填写 */
+    /* (3) 检查是否勾选同意用户协议 */
+    /* (4) 如果2+3都满足，那么就应该把需要的数据作为参数提交给服务器。 */
+    $(".loginBtn").click(function () {
+      $(".userName,.user-yzm,.userpwd1,.userpwd2").trigger("blur");
+      if ($(".activeColor").length != 0) {
+        alert("请输入正确的注册信息！")
+      } else {
+        $.ajax({
+          type: "post",
+          url: "http://127.0.0.1/code/src/jiuxian/server/register.php",
+          data: `password=${$(".userpwd2").val()}&phone=${$(".userName").val()}`,
+          dataType: "json",
+          success: function (response) {
+            console.log(response);
+            if (response.status == "success") {
+              window.location.href = "https://www.jianke.com/";
+            } else {
+              alert(response.data.msg)
+            }
+          }
+        })
+      }
+
+    })
+  </script>
+</body>
+
+</html>

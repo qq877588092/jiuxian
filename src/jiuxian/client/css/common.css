@@ -1,0 +1,95 @@
+@charset "utf-8";
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+html,
+body,
+div,
+img,
+a,
+i,
+em,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+table,
+input,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+b,
+section,
+article,
+footer,
+nav,
+main,
+header,
+strong,
+fieldset {
+    margin: 0;
+    padding: 0;
+}
+/* 通用样式 */
+section,
+footer,
+header{
+    width: 100%;
+}
+
+img {
+    border: 0;
+    display: block;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+i,em{
+    font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+}
+
+input,
+.button,
+textarea {
+    border: 0;
+    outline: none;
+    resize: none;
+}
+
+
+/* 高度塌陷 */
+
+.news:after {
+    content: ".";
+    clear: both;
+    display: block;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}

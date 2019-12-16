@@ -1,0 +1,517 @@
+@charset "utf-8";
+
+body {
+    background: #fafafa;
+}
+
+/* 通用样式 */
+.headerBox,
+.main,
+.jx-foot {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.box {
+    width: 100%;
+    background: #fafafa;
+    min-width: 1000px;
+}
+
+.top-header {
+    width: 100%;
+    height: 88px;
+}
+
+.head-logo {
+    width: 257px;
+    height: 63px;
+    padding-top: 12.5px;
+    float: left;
+}
+
+.head-logo p {
+    float: left;
+}
+
+.head-logo p a {
+    display: block;
+    width: 140px;
+    height: 63px;
+}
+
+.head-logo-src {
+    float: right;
+}
+
+.head-reg {
+    float: right;
+    color: #999;
+    margin-top: 48px;
+    height: 14px;
+    line-height: 14px;
+    font-size: 12px;
+}
+
+.head-nav {
+    width: 85px;
+    float: right;
+    margin: 46px 0 0 20px;
+    font-size: 12px;
+    color: #666;
+    text-align: center;
+}
+
+.head-nav-ul {
+    padding-top: 4px;
+    z-index: 8;
+}
+
+.head-nav-ul li {
+    border-top: 1px dotted #ccc;
+    height: 24px;
+    line-height: 24px;
+    background: #fff;
+    padding-right: 16px;
+    z-index: 8;
+}
+
+.head-nav-ul li a {
+    color: #999;
+}
+
+.active {
+    background: #ffdddd !important;
+}
+
+form {
+    z-index: -1;
+    pointer-events: none;
+}
+
+.main-bg {
+    width: 100%;
+    height: 600px;
+}
+
+.main-d1 {
+    position: relative;
+    height: 600px;
+}
+
+.main-d1-a {
+    display: block;
+    position: absolute;
+    width: 650px;
+    height: 600px;
+    top: 0;
+}
+
+.main-users-login {
+    width: 350px;
+    height: 405px;
+    background: #fff;
+    position: relative;
+    top: 100px;
+    left: 650px;
+}
+
+.ewm {
+    position: absolute;
+    left: 285px;
+    display: block;
+    width: 65px;
+    height: 65px;
+}
+
+.pcl {
+    position: absolute;
+    left: 285px;
+    display: none;
+    width: 65px;
+    height: 65px;
+}
+.nmain-d1-a{
+    pointer-events: auto;
+}
+.main-users-login{
+    pointer-events: auto;
+}
+.main-users-login .ewm i {
+    display: block;
+    width: 65px;
+    height: 65px;
+    background: url(../images/regLogin-8.png)no-repeat 0 -230px !important;
+}
+
+.main-users-login .pcl i {
+    display: block;
+    width: 65px;
+    height: 65px;
+    background: url(../images/regLogin-8.png)no-repeat -80px -230px !important;
+}
+
+.loginCon {
+    width: 270px;
+    margin: 0 auto;
+}
+
+.loginA {
+    height: 40px;
+    padding-top: 14px;
+    margin-bottom: 19px;
+    line-height: 40px;
+    border-bottom: 1px solid #e9e9e9;
+}
+
+.userLogin {
+    color: #999;
+    font-size: 16px;
+    line-height: 40px;
+}
+
+.activePhone {
+    color: #e4393c !important;
+    font-weight: bold;
+}
+
+.loginA span {
+    color: #999;
+    padding: 0 18px;
+    font-size: 12px;
+}
+
+.mobieLogin {
+    color: #999;
+    font-size: 16px;
+}
+
+.loginType {
+    height: 268px;
+}
+
+.loginName {
+    width: 268px;
+    height: 42px;
+    margin-bottom: 20px;
+    border: 1px solid #dcdcdc;
+}
+
+.leftFont {
+    width: 43px;
+    height: 42px;
+    position: absolute;
+    background: #F3F3F3;
+}
+
+.loginName input {
+    width: 173px;
+    height: 42px;
+    padding: 0 45px 0 50px;
+    border: 0;
+}
+.mistakeTip {
+    background-color: #ed787f;
+    padding: 0 10px;
+    height: 20px;
+    color: #fff;
+    line-height: 20px;
+    position: absolute;
+    bottom: 274px;
+    right: 40px;
+    z-index: 5;
+    font-size: 12px;
+}
+.mistakeTip2{
+    bottom: 210px;
+    right: 40px;
+}
+.mistakeTip3{
+    z-index: 888;
+    bottom: 144px;
+    right: 40px;
+}
+.yzmError{
+    background-color: #ed787f;
+    padding: 0 10px;
+    height: 20px;
+    color: #fff;
+    line-height: 20px;
+    position: absolute;
+    z-index: 5;
+    font-size: 12px;
+    z-index: 888;
+    bottom: 144px;
+    right: 40px;
+}
+.user-pawd-error{
+    background-color: #ed787f;
+    padding: 0 10px;
+    height: 20px;
+    color: #fff;
+    line-height: 20px;
+    position: absolute;
+    z-index: 5;
+    font-size: 12px;
+    z-index: 888;
+    bottom: 144px;
+    right: 40px;
+}
+
+.activeColor {
+    border-color: #ff6666 !important;
+}
+
+.userIcon {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: url(../images/regLogin-8.png)no-repeat -51px 0px !important;
+    margin: 10px 10px 0 10px;
+}
+
+.userPawd {
+    background: url(../images/regLogin-8.png)no-repeat -83px 0px !important;
+}
+
+.userNzm {
+    background: url(../images/regLogin-8.png)no-repeat -426px 0px !important;
+}
+
+.delInput {
+    display: none;
+    width: 15px;
+    height: 15px;
+    background: url(../images/regLogin-8.png)no-repeat -162px 0px !important;
+    position: absolute;
+    left: 246px;
+    top: 15px;
+}
+
+#captcha1 {
+    z-index: 5;
+    position: absolute;
+    top: 203px;
+    right: 40px;
+    color: #666;
+}
+
+#captcha2 {
+    z-index: 5;
+    position: absolute;
+    top: 138px;
+    right: 40px;
+    color: #666;
+}
+
+.userPhone {
+    display: block;
+    width: 26px;
+    height: 26px;
+    background: url(../images/regLogin-8.png)no-repeat -262px 1px !important;
+}
+
+.loginBtn {
+    width: 270px;
+    background-color: #e10303;
+    border-radius: 2px;
+    border: 0;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+
+}
+
+.loginBtn input {
+    font-size: 16px;
+    background-color: #e10303;
+    color: #fff;
+}
+
+.auto {
+    margin-top: 8px;
+}
+
+.auto label {
+    width: 200px;
+    height: 20px;
+    color: #999;
+    font-size: 12px;
+    position: relative;
+    top: -2px;
+}
+
+.moreChoice {
+    height: 26px;
+    border-bottom: 1px solid #e9e9e9;
+}
+
+.freeReg {
+    color: #0066cc;
+    display: block;
+    float: right;
+    padding-left: 13px;
+    font-size: 12px;
+    position: relative;
+    top: -20px;
+
+}
+
+.forgetPwd {
+    font-size: 12px;
+    float: right;
+    color: #999;
+    display: block;
+    position: relative;
+    top: -20px;
+}
+
+.cooperate {
+    height: 42px;
+    margin-top: 20px;
+}
+
+.cooperate p {
+    float: left;
+    color: #999;
+    font-size: 12px;
+    margin-right: 14px;
+}
+
+.perateWay {
+    width: 243px;
+    height: 42px;
+    margin: 0 auto;
+}
+
+.cooperateWay a {
+    margin-right: 10px;
+    position: relative;
+    top: -6px;
+}
+
+.cooperateWay .qq {
+    float: left;
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: url(../images/regLogin-8.png)no-repeat 0px -35px !important;
+}
+
+.cooperateWay .sina {
+    float: left;
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: url(../images/regLogin-8.png)no-repeat -51px -35px !important;
+}
+
+.cooperateWay .aliPay {
+    float: left;
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: url(../images/regLogin-8.png)no-repeat -102px -35px !important;
+}
+
+.cooperateWay .baidu {
+    float: left;
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: url(../images/regLogin-8.png)no-repeat -153px -35px !important;
+}
+
+input::-webkit-input-placeholder {
+    color: #ccc;
+}
+
+input::-moz-input-placeholder {
+    color: #ccc;
+}
+
+input::-ms-input-placeholder {
+    color: #ccc;
+}
+
+.jx-foot {
+    margin: 50px auto;
+    text-align: center;
+}
+
+.jx-foot a {
+    color: #333;
+}
+
+.jx-foot p {
+    font-size: 12px;
+    line-height: 30px;
+    color: #333;
+}
+
+.jx-foot .red {
+    font-size: 12px;
+    color: #ff0000;
+}
+
+.ewmCon {
+    width: 270px;
+    margin-left: 40px;
+}
+
+.ewmCon h2 {
+    height: 70px;
+    line-height: 70px;
+    font-size: 16px;
+    color: #666;
+}
+
+.scanError .scanErrorEwm {
+    width: 150px;
+    height: 150px;
+    margin: 20px auto 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.scanErrorTip {
+    margin-left: 68px;
+}
+
+.scanErrorTip i {
+    display: block;
+    width: 33px;
+    height: 33px;
+    background: url(../images/regLogin-8.png)no-repeat -270px -150px !important;
+    float: left;
+    font-size: 14px;
+}
+
+.ewmCon .scanError .scanErrorTip p {
+    float: left;
+    color: #999;
+    line-height: 16px;
+    text-align: left;
+    font-size: 12px;
+}
+
+.ewmCon .scanError .scanErrorTip p em {
+    color: #e4393c;
+    font-style: normal;
+}
+
+.ewmCon .scanError .sCanErroLink {
+    padding-top: 50px;
+    text-align: right;
+}
+
+.ewmCon .scanError .sCanErroLink a {
+    font-size: 12px;
+    padding-left: 10px;
+    color: #333;
+}
+
+.ewmCon .scanError .sCanErroLink {
+    padding-top: 75px;
+    text-align: right;
+}

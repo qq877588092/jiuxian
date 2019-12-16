@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<link rel="stylesheet" href="font_1459788_i582iz5g31s/iconfont.css">
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/login.css">
+	<script src="js/captcha.js"></script>
+	<script src="js/jquery-3.4.1.js"></script>
+</head>
+
+<body>
+	<div class="box">
+		<header class="top-header">
+			<div class="headerBox">
+				<div class="head-logo">
+					<p style="background: url(images/logo.png)no-repeat;">
+						<a class="head-logo-a" target="_blank" href="#"></a>
+					</p>
+					<a class="head-logo-src" href="javascript:;">
+						<img src="images/slogan.jpg" alt="">
+					</a>
+				</div>
+				<div class="head-nav">
+					<div>
+						<i>帮助中心</i>
+						<span class="iconfont icon-Rectangle-path"></span>
+					</div>
+					<ul class="head-nav-ul" style="display: none;z-index: 888;">
+						<li class="active"><a href="javascript:;">配送说明</a> </li>
+						<li><a href="javascript:;">支付方式</a></li>
+						<li><a href="javascript:;">售后服务</a></li>
+						<li><a href="javascript:;">企业客户</a></li>
+					</ul>
+				</div>
+				<div class="head-reg">
+					<span>欢迎来到酒仙网！</span>
+					<a href="#">免费注册</a>
+				</div>
+			</div>
+
+		</header>
+		<form action="">
+			<div class="main-bg" style="background: url(images/bg-banner.jpg)no-repeat top center;">
+				<div class="main">
+					<div class="main-d1">
+						<a class="main-d1-a" href="#"></a>
+						<div class="main-users-login">
+							<a class="ewm" href="javascript:;" style="display: block;">
+								<i></i>
+							</a>
+							<a class="pcl" href="javascript:;" style="display: none;">
+								<i></i>
+							</a>
+							<div class="loginCon" style="display: block;">
+								<div class="loginA">
+									<a class="userLogin activePhone" href="#">帐号登录</a>
+									<span>|</span>
+									<a class="mobieLogin" href="#">手机动态密码登录</a>
+								</div>
+								<div class="loginType" style="display: block;">
+									<div class="loginName">
+										<div class="leftFont">
+											<i class="userIcon"></i>
+											<i class="delInput"></i>
+										</div>
+										<input class="userName" type="text" placeholder="用户名/邮箱/手机号码">
+										<div class="mistakeTip mistakeTip1" style="display:none">请输入用户名/邮箱/手机号</div>
+									</div>
+									<div class="loginName">
+										<div class="leftFont">
+											<i class="userIcon userPawd"></i>
+											<i class="delInput"></i>
+										</div>
+										<input class="userPwd1" type="password" placeholder="密码">
+										<div class="mistakeTip mistakeTip2" style="display:none">请输入密码</div>
+									</div>
+									<div class="loginName">
+										<div class="leftFont">
+											<i class="userIcon userNzm"></i>
+
+										</div>
+										<input class="userYzm1" type="text" placeholder="验证码">
+										<div class="mistakeTip mistakeTip3" style="display:none">请输入验证码</div>
+										<div class="yzmError" style="display:none">验证码错误</div>
+										<canvas width="80" height="43" id="captcha1"></canvas>
+										<div class="user-pawd-error" style="display:none">用户名或密码错误</div>
+									</div>
+									<div class="loginBtn">
+										<input type="button" value="登&nbsp;&nbsp;录">
+									</div>
+									<div class="moreChoice clearfix">
+										<div class="auto">
+											<input type="checkbox" class="check" id="auto" name="remember" value="yes">
+											<label for="auto">自动登录</label>
+										</div>
+										<a class="freeReg" href="javascript:;">免费注册</a>
+										<a class="forgetPwd" id="foget" href="javascript:;">忘记密码</a>
+									</div>
+									<div class="cooperate">
+										<p>使用合作账号登录</p>
+										<div class="cooperateWay clearfix">
+											<a class="qq" href="javascript:;"><i></i></a>
+											<a class="sina" href="javascript:;"><i></i></a>
+											<a class="aliPay" href="javascript:;" name="fastlogin"><i></i></a>
+											<a class="baidu" href="javascript:;"><i></i></a>
+										</div>
+									</div>
+								</div>
+								<div class="loginPhone loginType" style="display: none;">
+									<div class="loginName">
+										<div class="leftFont">
+											<i class="userIcon"></i>
+											<i class="delInput"></i>
+										</div>
+										<input class="userPhone" type="text" placeholder="手机号码">
+									</div>
+									<div class="loginName">
+										<div class="leftFont">
+											<i class="userIcon userNzm"></i>
+											<i class="delInput"></i>
+										</div>
+										<input class="userYzm2" type="text" placeholder="验证码">
+										<canvas width="80" height="43" id="captcha2"></canvas>
+									</div>
+									<div class="loginName">
+										<div class="leftFont">
+											<i class="userIcon userPhone"></i>
+											<i class="delInput"></i>
+										</div>
+										<input class="userPawd2" type="password" placeholder="密码">
+									</div>
+									<div class="loginBtn">
+										<input type="button" value="登&nbsp;&nbsp;录">
+									</div>
+									<div class="moreChoice clearfix">
+									</div>
+									<div class="cooperate">
+										<p>使用合作账号登录</p>
+										<div class="cooperateWay clearfix">
+											<a class="qq" href="javascript:;"><i></i></a>
+											<a class="sina" href="javascript:;"><i></i></a>
+											<a class="aliPay" href="javascript:;" name="fastlogin"><i></i></a>
+											<a class="baidu" href="javascript:;"><i></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="ewmCon" style="display: none;">
+								<h2>扫码登录 </h2>
+								<!-- 扫描首页和错误 -->
+								<div class="scanError">
+									<div class="scanErrorEwm">
+										<img src="images/ewm.png" alt="">
+										<div style="display:none;" id="createCode">
+											<div class="bj"></div>
+											<div class="info">
+												<p>二维码已失效</p>
+												<a href="javascript:">刷新</a>
+											</div>
+										</div>
+									</div>
+									<div class="tipImg"></div>
+									<div class="scanErrorTip clearfix">
+										<i></i>
+										<p>打开<em>手机酒仙APP</em><br>扫描二维码</p>
+									</div>
+									<div class="sCanErroLink"><span><a href="javascript:;">账号密码登录 </a><a
+												href="/register.htm">免费注册</a></span></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+		<footer>
+			<div class="jx-foot">
+				<p>© &nbsp;酒仙网&nbsp; 2011 jiuxian.com All &nbsp;Rights Reserved&nbsp;&nbsp;<a target="_blank"
+						href="#">京ICP证110141号</a>&nbsp;&nbsp;京公网安备1101050188221</p>
+				<p class="red">购买前请确认达到法定饮酒年龄！酒仙网不销售任何含酒精产品给18岁以下人士！</p>
+			</div>
+		</footer>
+	</div>
+	<script>
+		//验证码
+		let captcha1 = new Captcha({
+			dotNum: 10,
+			lineNum: 20,
+			fontSize: 26,
+			length: 4,
+		});
+		let code;
+		captcha1.draw(document.querySelector('#captcha1'), r => {
+			console.log(r, '验证码1');
+			code = r.toUpperCase();
+		});
+		let captcha2 = new Captcha({
+			dotNum: 10,
+			lineNum: 20,
+			fontSize: 26,
+			length: 4,
+		});
+		captcha2.draw(document.querySelector('#captcha2'), r => {
+			console.log(r, '验证码2');
+		});
+
+		//右上下拉菜单
+		$(".head-nav").mouseover(function () {
+			$(this).children(".head-nav-ul").css({
+				display: "block"
+			});
+			$(this).children(".head-nav-ul").children("li").mouseover(function () {
+				$(this).addClass("active").siblings().removeClass("active");
+			})
+		})
+		$(".head-nav").mouseout(function () {
+			$(this).children(".head-nav-ul").children("li").eq(0).addClass("active").siblings().removeClass("active");
+			$(this).children(".head-nav-ul").css({
+				display: "none"
+			});
+		})
+		//普通登录和二维码登录
+		$(".ewm").click(function () {
+			$(this).hide().siblings("a").show();
+			$(this).siblings(".loginCon").hide();
+			$(this).siblings(".ewmCon").show();
+			$(this).siblings("a").click(function () {
+				$(this).hide().siblings("a").show();
+				$(this).siblings(".loginCon").show();
+				$(this).siblings(".ewmCon").hide();
+			});
+		})
+		//账号登录和手机号码切换登录
+		$(".loginA a").click(function () {
+			$(this).addClass("activePhone").siblings().removeClass("activePhone");
+			$(this).parent().siblings(".loginType").toggle();
+			$(this).parent().siblings(".loginPhone").toggle();
+			$(this).parent().siblings(".loginPhone").toggle();
+		})
+
+		/* 表单验证：监听对应的输入框失去焦点事件，当失去焦点的时候检查是否满足规则，如果不满足规则那么就提示！！！ */
+		$(".userName").blur(function () {
+			toggleTab($(this));
+		})
+		$(".userPwd1").blur(function () {
+			toggleTab($(this));
+		})
+		$(".userYzm1").blur(function () {
+			toggleTab($(this));
+		})
+
+		function toggleTab(item) {
+			if (item.val() == 0) {
+				item.parents(".loginName").addClass("activeColor");
+				item.siblings(".mistakeTip").show();
+				item.siblings(".leftFont").children(".delInput").show();
+			}
+			item.focus(() => {
+				item.parent(".loginName").removeClass("activeColor");
+				item.siblings(".mistakeTip").hide();
+				item.siblings(".leftFont").children(".delInput").hide();
+			})
+		}
+
+
+		/* 给立即登录按钮添加点击事件，当点击该按钮的时候获取用户名和密码，发请求给服务器，等到服务器返回的结果(登录成功 | 登录失败[帐号不存在？密码不正确]) */
+		$(".loginBtn").click(function () {
+			let username = $(".userName").val();
+			let password = $(".userPwd1").val();
+			
+			if ($(".userYzm1").val().toUpperCase() != code) {
+				//验证码刷新
+				let captcha1 = new Captcha({
+					dotNum: 10,
+					lineNum: 20,
+					fontSize: 26,
+					length: 4,
+				});
+				captcha1.draw(document.querySelector('#captcha1'), r => {
+					console.log(r, '验证码1');
+					code = r.toUpperCase();	
+				});
+		
+				
+
+				$(".yzmError").show();
+				$(".yzmError").parents(".loginName").addClass("activeColor");
+			} else {
+				console.log("==================");
+
+				$(".yzmError").hide();
+				$(".yzmError").parents(".loginName").removeClass("activeColor");
+
+				/* 验证码通过，发请求登录 */
+				$.ajax({
+					type: "post",
+					url: "http://127.0.0.1/code/src/jiuxian/server/user.php",
+					data: {
+						username,
+						password
+					},
+					dataType: "json",
+					success: function (response) {
+						console.log(response);
+						/* 检查结果：成功 ？失败 */
+						if (response.status == "success") {
+							window.location.href = "https://www.jiuxian.com/";
+						} else {
+							$(".user-pawd-error").show();
+						}
+					}
+				});
+			}
+			//获得焦点删除所有错误信息
+			$(".loginName input").focus(() => {
+				$(".yzmError").hide();
+				$(".user-pawd-error").hide();
+			})
+
+		})
+	</script>
+</body>
+
+</html>
