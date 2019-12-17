@@ -5,14 +5,12 @@ class Subpage {
     //接口
     init() {
         this.renderUI();
-        this.showBox();
     }
     //渲染
     renderUI() {
         this.createBox();
         this.createMenu();
         this.createEvent();
-        
     }
     //创建标签
     createBox() {
@@ -65,7 +63,7 @@ class Subpage {
             $(this).addClass("borderLi").siblings().removeClass("borderLi");
             $(this).parent().siblings(".menuBox").eq($(this).index()).show().siblings(".menuBox").hide();
         })
-        $(".shoppingSort").mouseleave(function () {
+        $(".shoppingSort").mouseleave(function () { 
             $(this).children(".sortBox").hide();
             $(".menuBox").hide();
             $(".sortBox li").removeClass("liarticlebg");
@@ -74,11 +72,6 @@ class Subpage {
 
     }
     //商品边框显示隐藏
-    // showBox() {
-    //     $(".productShow li").hover(function () {
-    //         $(this).children(".showBox1").toggle();
-    //     })
-    // }
 
 }
 
