@@ -63,13 +63,50 @@ class Shopping {
 
 }
 
+function getMysql(index) {
+    $.ajax({
+        type: "get",
+        url: "http://127.0.0.1/code/jiuxian/src/jiuxian/server/getMysql.php",
+        data: "page=" + index,
+        dataType: "json",
+        success: function (response) {
+            console.log(response);
+            
+            let p1 = new Shopping(response);
+            p1.init();
+        }
+    });
+}
 
+//页面刷新获取第一页数据
+getMysql(1);
+
+//后台获取页码生成标签
 $.ajax({
     type: "get",
-    url: "http://127.0.0.1/code/jiuxian/src/jiuxian/server/getMysql.php",
+    url: "http://127.0.0.1/code/jiuxian/src/jiuxian/server/getPage.php",
     dataType: "json",
     success: function (response) {
-        let p1 = new Shopping(response);
-        p1.init();
+        let count = response.count;
+        let html1 = "";
+        for (i = 0; i < count; i++) {
+            html1 +=
+                `<a class="number ${i==0?"on":""}">${i+1}</a>`
+        }
+        let html2 =
+            `
+        <a href="javascript:void(0)" class="prevpage">上一页
+          </a>
+          ${html1}
+          <span class="sheng" href="">...</span>
+          <a href="#" class="nextpage">下一页</a>
+          <span class="totalPage">共<em>${count}</em>页</span>
+        `
+        $(".fanye").append(html2);
+        $(".fanye .number").click(function () {
+            $(this).addClass("on").siblings().removeClass("on");
+            //发请求获取数据
+            getMysql($(this).index());
+        })
     }
 });

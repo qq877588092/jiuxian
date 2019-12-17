@@ -74,11 +74,7 @@ class Subpage {
     }
     //商品边框显示隐藏
     showBox() {
-        console.log("++++++++1");
-        console.log($(".productShow li"));
-        
         $(".productShow li").hover(function () {
-            console.log("==================2");
             $(this).children(".showBox1").toggle();
         })
     }
