@@ -5,14 +5,13 @@ class Subpage {
     //接口
     init() {
         this.renderUI();
-        this.showBox();
     }
     //渲染
     renderUI() {
         this.createBox();
         this.createMenu();
         this.createEvent();
-        
+        this.showBox();
     }
     //创建标签
     createBox() {
@@ -74,11 +73,16 @@ class Subpage {
 
     }
     //商品边框显示隐藏
-    // showBox() {
-    //     $(".productShow li").hover(function () {
-    //         $(this).children(".showBox1").toggle();
-    //     })
-    // }
+    showBox() {
+        console.log("++++++++1");
+        console.log($(".productShow li"));
+        
+        $(".productShow li").hover(function () {
+            console.log("==================2");
+            $(this).children(".showBox1").toggle();
+        })
+    }
+
 
 }
 
