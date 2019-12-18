@@ -452,12 +452,14 @@ body {
   width: 220px;
   height: 470px;
   float: right;
-  background: pink;
+
 }
-.bannerBox{
+
+.bannerBox {
   position: relative;
 }
-.mav{
+
+.mav {
   height: 470px;
   position: absolute;
   right: 0;
@@ -465,6 +467,7 @@ body {
   width: 190px;
   z-index: 7;
 }
+
 .mav a {
   display: block;
   height: 156px;
@@ -474,23 +477,368 @@ body {
   margin-bottom: 1px;
   background: url(http://img10.jiuxian.com/bill/2019/0305/2317997….png) no-repeat;
 }
+
 .mav a:hover {
-  background-color: rgb(119, 117, 81,0.7);
+  background-color: rgb(119, 117, 81, 0.7);
 }
 
 
 /* 内容区 */
 .main {
   min-height: 600px;
-  background-color: pink;
-}
-.mainBox{
-  background-color: red;
-}
-.shoppingBox{
-  background-color: yellowgreen;
+
 }
 
+.Lay_3 {
+  background: #fff;
+}
+
+.comTitle {
+  float: left;
+}
+
+.hotWordBox {
+  float: left;
+  width: 186px;
+  border-right: 1px solid #ececec;
+  background: #f9f9f9;
+  height: 131px;
+  padding: 20px 10px 10px 14px;
+}
+
+.topTenBox,
+.topTenCon,
+.topTenConWrap {
+  width: 985px;
+  float: left;
+  height: 162px;
+}
+
+.titlebox {
+  height: 40px;
+  line-height: 40px;
+  background: #f9f9f9;
+  padding: 0 3px;
+  border-top: 1px solid #999;
+}
+
+.jpTitle {
+  float: left;
+  padding-left: 2px;
+}
+
+.jpTitle i {
+  display: inline-block;
+  width: 7px;
+  height: 18px;
+  background: #ff9000;
+  overflow: hidden;
+  vertical-align: middle;
+}
+
+.jpTitle span {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 17px;
+  color: #333;
+  font-family: "å¾®è½¯é›…é»‘";
+  margin-left: 10px;
+}
+.spiritWrap{
+  border-left: 1px solid #ececec;
+    border-right: 1px solid #ececec;
+    border-bottom: 1px solid #ececec;
+  border-top: 2px solid #c94b56;
+  height: 485px;
+  overflow: hidden;
+}
+.rightMenu {
+  float: right;
+  margin-left: 50px;
+  display: inline;
+  color: #999;
+}
+
+.rightMenu a {
+  padding: 0 7px;
+  color: #999;
+}
+
+.rightMenu a:hover {
+  color: #cc0000;
+}
+
+.rightMenu .goBlank {
+  padding: 4px 7px;
+  color: #fff;
+  background: #d43d4e;
+  height: 21px;
+  border-radius: 2px;
+}
+
+.rightMenu .goBlank:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.rightMenu .goBlank span {
+  padding-left: 5px;
+}
+
+.hotWordBox li {
+  width: 186px;
+  font-family: "å¾®è½¯é›…é»‘";
+}
+
+.hotWordBox li h3 {
+  color: #cc0000;
+  font-weight: bold;
+  padding-right: 5px;
+  font-size: 0;
+}
+
+.hotWordBox li h3 i {
+  width: 3px;
+  height: 3px;
+  display: inline-block;
+  vertical-align: middle;
+  background: #d02229;
+  overflow: hidden;
+}
+
+.hotWordBox li h3 span {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 14px;
+  margin-left: 5px;
+}
+
+.hotWordBox li p {
+  padding-left: 8px;
+  width: 178px;
+  height: 36px;
+  line-height: 18px;
+  overflow: hidden;
+  margin-top: 5px;
+}
+
+.hotWordBox li p a {
+  float: left;
+  padding-right: 10px;
+  display: inline-block;
+  font-size: 0;
+}
+
+.hotWordBox li p a span {
+  font-size: 12px;
+  display: block;
+  width: 48px;
+  height: 18px;
+  line-height: 18px;
+  overflow: hidden;
+}
+
+.topTenNavBox {
+  height: 32px;
+  line-height: 32px;
+  padding: 0 12px;
+}
+
+.topTenNavBox h3 {
+  float: left;
+  font-size: 0;
+}
+
+.topTenNavBox h3 i {
+  display: inline-block;
+  vertical-align: middle;
+  width: 11px;
+  height: 13px;
+  overflow: hidden;
+}
+
+.topTenNavBox h3 span {
+  font-size: 12px;
+  color: #bd7833;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+
+.topTenNavBox h3 .topTen1 {
+  background-position: -38px 0;
+}
+
+.topTenNavBox h3 .topTen2 {
+  background-position: -24px 0;
+}
+
+.Lay_5 .topTenNavBox h3 span {
+  color: #d43d4e;
+}
+
+.topTenNav {
+  float: right;
+  height: 32px;
+}
+
+.topTenNav a {
+  font-size: 12px;
+  height: 32px;
+  padding: 0 10px;
+  display: block;
+  float: left;
+  color: #666;
+}
+
+.topTenNav span {
+  float: left;
+  display: block;
+  color: #cccccc;
+}
+
+.topTenNav a:hover {
+  color: #cc0000;
+  text-decoration: none;
+  height: 32px;
+  padding: 0 10px;
+}
+
+.topTenNav .on {
+  color: #cc0000;
+  text-decoration: none;
+  height: 32px;
+  padding: 0 10px;
+}
+
+.topTenConWrap {
+  height: 102px;
+  padding: 10px 0 15px 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.topTenCon {
+  height: 102px;
+  overflow: hidden;
+}
+
+.topTenCon li {
+  float: left;
+  width: 190px;
+  margin-top: 10px;
+  padding-right: 7px;
+}
+
+.topTenCon li .topTenOne {
+  background-position: -150px -164px;
+  width: 20px;
+  display: block;
+  float: left;
+  height: 89px;
+}
+
+.topTenCon li .topTenTwo {
+  background-position: -171px -164px;
+  width: 20px;
+  display: block;
+  float: left;
+  height: 89px;
+}
+
+.topTenCon li .topTenThree {
+  background-position: -196px -164px;
+  width: 20px;
+  display: block;
+  float: left;
+  height: 89px;
+}
+
+.topTenCon li .topTenFour {
+  background-position: -218px -164px;
+  width: 20px;
+  display: block;
+  float: left;
+  height: 89px;
+}
+
+.topTenCon li .topTenFive {
+  background-position: -242px -164px;
+  width: 20px;
+  display: block;
+  float: left;
+  height: 89px;
+}
+
+.topTenCon li .topTenPic {
+  float: left;
+}
+
+.topTenCon li .topTenPic a img {
+  width: 90px;
+  height: 90px;
+}
+
+.topTenCon li .topTenTitBox {
+  float: left;
+  width: 80px;
+  padding-top: 5px;
+}
+
+.topTenCon li .topTenTitBox .topTenTit {
+  width: 80px;
+  height: 36px;
+  line-height: 18px;
+  overflow: hidden;
+  font-family: "å®‹ä½“";
+}
+
+.topTenCon li .topTenTitBox .topTenTit a {
+  width: 80px;
+  height: 36px;
+  display: block;
+}
+
+.topTenCon li .topTenTitBox .topTenPrice {
+  font-size: 16px;
+  height: 18px;
+  line-height: 18px;
+  margin-top: 5px;
+  color: #cc0000;
+  width: 80px;
+  overflow: hidden;
+  font-family: "å¾®è½¯é›…é»‘";
+  background: #fff;
+}
+
+.topTenCon li .topTenTitBox .topTenPrice strong {
+  font-size: 15px;
+  font-weight: normal;
+  color: #CD0100;
+}
+.bannerBoxmin{
+  background-color: red;
+  width: 210px;
+  height: 485px;
+  float: left;
+}
+.spiritList{
+
+  width: 988px;
+  float: right;
+  height: 485px;
+  overflow: hidden;
+  position: relative;
+}
+.spiritList{ float:right; height:485px; overflow:hidden; position:relative;}
+.spiritList li{ float:left; width:196px; height:232px; border-bottom:1px solid #ececec; border-left:1px solid #ececec; position:relative; padding-top:10px; z-index:1;}
+.spiritListPic{ width:160px; margin:0 auto; position:relative; z-index:1; }
+.spiritListTit{ width:160px; padding:0 18px; height:36px; overflow:hidden; margin-top:5px;}
+.spiritListTit a{display: block;width: 100%;height: 18px;line-height: 18px;font-size: 12px;}
+.spiritListPrice{width:178px; padding:0 0 0 18px; height:18px; overflow:hidden; line-height:18px; white-space:nowrap;}
+.spiritListPrice strong{ font-size:12px; font-weight:normal; font-family:"å¾®è½¯é›…é»‘"; color:#CD0100; display:inline; vertical-align:middle;}
+.topTenWrap{ height:161px; border-left:1px solid #ececec; border-right:1px solid #ececec; border-bottom:1px solid #ececec;}
+.hotWordBox{ float: left; width:186px; border-right:1px solid #ececec; background:#f9f9f9; height:131px; padding:20px 10px 10px 14px;}
 
 
 
@@ -619,13 +967,16 @@ footer {
   float: left;
   padding: 10px;
   margin-right: 80px;
-  
+
 }
-.footerBottom ul li h3{
+
+.footerBottom ul li h3 {
   color: #fff;
-  
+
 }
-.footerBottom ul li span{float: left;
+
+.footerBottom ul li span {
+  float: left;
   display: block;
   padding-left: 8px;
   padding-bottom: 8px;
@@ -644,73 +995,87 @@ footer {
   color: #ccc;
   line-height: 30px;
 }
-.footerBottom .liz{
+
+.footerBottom .liz {
   margin: 0;
   color: #fff;
 }
-.footerBottom .liz span{
+
+.footerBottom .liz span {
   padding-top: 5px;
 }
+
 .footerBottom ul li div {
   height: 40px;
-  
-}
-.footerBottom .rightFont1{
-  float: left;
-  display: inline-block;
-  width: 28px;
-  height: 28px;
-  background:url(../images/public-24.png)no-repeat -140px -74px;
-}
-.footerBottom .rightFont2{
-  float: left;
-  display: inline-block;
-  width: 28px;
-  height: 28px;
-  background:url(../images/public-24.png)no-repeat -103px -74px;
+
 }
 
-.bottomBox{
+.footerBottom .rightFont1 {
+  float: left;
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  background: url(../images/public-24.png)no-repeat -140px -74px;
+}
+
+.footerBottom .rightFont2 {
+  float: left;
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  background: url(../images/public-24.png)no-repeat -103px -74px;
+}
+
+.bottomBox {
   margin-top: 20px;
 }
-.bottomBoxLeft{
+
+.bottomBoxLeft {
   float: left;
   height: 200px;
   width: 780px;
 
 }
-.bottomBoxRight{
+
+.bottomBoxRight {
   width: 340px;
   height: 200px;
   float: left;
 }
-.bottomBoxLeft p{
+
+.bottomBoxLeft p {
   padding: 10px;
   color: #999;
   height: 16px;
 }
-.bottomBoxLeft .yz{
+
+.bottomBoxLeft .yz {
   height: 40px;
 }
-.bottomBoxLeft p span{
+
+.bottomBoxLeft p span {
   display: block;
-  
+
   float: left;
   margin-right: 10px;
 }
-.bottomBoxLeft .xp{
+
+.bottomBoxLeft .xp {
   float: none;
 }
-.bottomBoxRight p{
+
+.bottomBoxRight p {
   width: 100px;
   height: 100px;
   padding-top: 10px;
 }
-.bottomBoxRight p img{
+
+.bottomBoxRight p img {
   width: 100%;
   height: 100%;
 }
-.bottomBoxRight div{
+
+.bottomBoxRight div {
   float: left;
   margin-right: 40px;
   margin-top: 30px;
