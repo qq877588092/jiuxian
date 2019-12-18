@@ -60,14 +60,13 @@ class Subpage {
             $(this).addClass("borderLi").siblings().removeClass("borderLi");
             $(this).parent().siblings(".menuBox").eq($(this).index()).show().siblings(".menuBox").hide();
         })
-        $(".shoppingSort").mouseleave(function () { 
+        $(".shoppingSort").mouseleave(function () {
             $(".menuBox").hide();
             $(".sortBox li").removeClass("liarticlebg");
             $(".sortBox li").removeClass("borderLi");
         })
 
     }
-    //商品边框显示隐藏
 
 }
 
