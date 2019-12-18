@@ -11,7 +11,8 @@ body {
 .navBox,
 .footerTop,
 .footerBottom,
-.bottomBox {
+.bottomBox,
+.mainBox {
   width: 1200px;
   margin: 0 auto;
 }
@@ -483,6 +484,20 @@ body {
   min-height: 600px;
   background-color: pink;
 }
+.mainBox{
+  background-color: red;
+}
+.shoppingBox{
+  background-color: yellowgreen;
+}
+
+
+
+
+
+
+
+
 
 /* 页脚 */
 footer {
