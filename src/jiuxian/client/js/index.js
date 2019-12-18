@@ -55,16 +55,12 @@ class Subpage {
     }
     //鼠标移入显示侧边栏
     createEvent() {
-        $(".shoppingSort").mouseenter(function () {
-            $(this).children(".sortBox").show();
-        });
         $(".sortBox li").hover(function () {
             $(this).addClass("liarticlebg").siblings().removeClass("liarticlebg");
             $(this).addClass("borderLi").siblings().removeClass("borderLi");
             $(this).parent().siblings(".menuBox").eq($(this).index()).show().siblings(".menuBox").hide();
         })
         $(".shoppingSort").mouseleave(function () { 
-            $(this).children(".sortBox").hide();
             $(".menuBox").hide();
             $(".sortBox li").removeClass("liarticlebg");
             $(".sortBox li").removeClass("borderLi");

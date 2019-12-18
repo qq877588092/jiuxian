@@ -8,10 +8,11 @@
   <title>Document</title>
   <link rel="stylesheet" href="font_1459788_i582iz5g31s/iconfont.css">
   <link rel="stylesheet" href="css/common.css">
-  <link rel="stylesheet" href="css/subpage.css">
+  <link rel="stylesheet" href="css/index.css">
   <script src="js/jquery-3.4.1.js"></script>
   <script src="../server/sidebar.json"></script>
-  <script src="js/subpage.js"></script>
+  <script src="js/index.js"></script>
+  <script src="js/banner.js"></script>
 </head>
 
 <body>
@@ -130,7 +131,7 @@
     <div class="navBox">
       <div class="shoppingSort">
         <h2>全部商品分类</h2>
-        <ul class="sortBox" style="display: none;">
+        <ul class="sortBox" style="display: block;">
         </ul>
       </div>
       <ul class="navLeft">
@@ -148,12 +149,30 @@
         <a href="#"></a>
         <img src="images/6d6d45d43d0a453b96514b68d2aa6e9c.gif" alt="">
       </div>
+      <div class="mav">
+        <a name="home_you10"
+          style="background:url(http://img10.jiuxian.com/bill/2019/0305/2317997e77844434b587b715fb3a3948.png) no-repeat;"
+          " target="_blank" class="smallImg"
+          rel="nofollow"></a>
+        <span class="mask1" style="display: none;"></span>
+        <a name="home_you11"
+          style="background:url(http://img09.jiuxian.com/bill/2018/1116/9afd5071f4f948ec9b5d8db94d4ea30e.png) no-repeat;"
+          " target="_blank" class="smallImg"
+          rel="nofollow"></a>
+        <span class="mask2" style="display: none;"></span>
+        <a name="home_you12"
+          style="background:url(http://img10.jiuxian.com/bill/2018/1218/fe0376d15b094e23b972d76f2cbfb4b7.png) no-repeat;"
+          " target="_blank" class="smallImg"
+          rel="nofollow"></a>
+        <span class="mask3" style="display: none;"></span>
+      </div>
     </div>
 
     <!-- banner -->
     <div class="bannerBox">
-
+      <div class="box"></div>
     </div>
+
     <!-- main内容区 -->
     <section class="main">
 
@@ -273,50 +292,8 @@
 
 
     <script>
-      //获取数据
-      // var arr = [];
-      // for (i = 0; i < $(".catItem").length; i++) {
-      //   var obj = {
-      //     leftName1: "",
-      //     leftName2: "",
-      //     rightName1: "",
-      //     rightName2: "",
-      //     src: ""
-      //   };
-      //   obj.leftName1 = $(".catItemCon h3")[i].innerText;
-      //   // obj.leftName2 =$(".catItem .categoryCon")[i].children.innerText;
-      //   var arr1 = [];
-      //   for (k = 0; k < $(".catItem .categoryCon").eq(i).children().find("a").length; k++) {
-      //     arr1.push($(".catItem .categoryCon").eq(i).children().find("a").eq(k).text());
-      //   }
-      //   var s1 = $(".catItem").parent().siblings(".menuBox").children(".menuCon").eq(i).find("h4").map(function (index,
-      //     ele) {
-
-      //       return obj.rightName1 = ele.innerText;
 
 
-      //   })
-      //   var s2 = $(".catItem").parent().siblings(".menuBox").children(".menuFoc").eq(i).find("img").map(function (index,
-      //     ele) {
-      //     return obj.src = ele.src;
-      //   })
-      //   var s3 = $(".catItem").parent().siblings(".menuBox").children(".menuCon").eq(i).find("a").map(function (index,
-      //     ele) {
-
-      //       return obj.rightName2 = ele.innerText;
-
-      //   })
-
-
-      //   obj.rightName1 =Array.from(s1);
-      //   obj.src = s2[0];
-      //   obj.rightName2 =Array.from(s3);
-      //   obj.leftName2 = arr1;
-      //   arr.push(obj);
-      // }
-      // console.log(arr);
-
-      // JSON.stringify(arr);
     </script>
 
 </body>

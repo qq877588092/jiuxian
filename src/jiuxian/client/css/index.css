@@ -276,12 +276,14 @@ body {
 
 .nav {
   background: #900;
+  height: 34px;
 }
 
 .navBox {
   height: 34px;
   color: #fff;
   line-height: 34px;
+  position: relative;
 }
 
 .shoppingSort {
@@ -327,11 +329,8 @@ body {
   background-color: #fff;
   width: 186px;
   height: 468px;
-  border: 2px solid;
-  border-color: rgb(204, 0, 0);
-  border-top: 0;
   position: absolute;
-  z-index: 2;
+  z-index: 888;
 }
 
 .sortBox li {
@@ -395,7 +394,7 @@ body {
   left: 188px;
   top: 34px;
   box-shadow: 0 0 4px 0 #ccc;
-  z-index: 300;
+  z-index: 900;
 }
 
 .menuBox .menuCon {
@@ -411,6 +410,7 @@ body {
   width: 100px;
   float: left;
   background: #F1F1F1;
+  color: #666;
 }
 
 .menuCon-list {
@@ -453,6 +453,30 @@ body {
   float: right;
   background: pink;
 }
+.bannerBox{
+  position: relative;
+}
+.mav{
+  height: 470px;
+  position: absolute;
+  right: 0;
+  top: 34px;
+  width: 190px;
+  z-index: 7;
+}
+.mav a {
+  display: block;
+  height: 156px;
+  position: relative;
+  width: 190px;
+  z-index: 8;
+  margin-bottom: 1px;
+  background: url(http://img10.jiuxian.com/bill/2019/0305/2317997….png) no-repeat;
+}
+.mav a:hover {
+  background-color: rgb(119, 117, 81,0.7);
+}
+
 
 /* 内容区 */
 .main {
