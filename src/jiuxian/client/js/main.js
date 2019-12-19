@@ -11,6 +11,7 @@ class MainBox {
     this.createMain();
     this.toggleShop();
     this.smallBanner();
+    this.floorEle();
   }
   //创建main标签
   createMain() {
@@ -145,7 +146,7 @@ class MainBox {
 
 
       return `
-            <div class="shoppingBox Lay_5 mt10 whiteWine news">
+            <div class="shoppingBox main1 Lay_5 mt10 whiteWine news">
             <div class="titlebox">
             <div class="comTitle"><i class="comIcon1 newIndexIcon">${ele.topNameI}</i><span>${ele.topNameSpan}</span></div>
             <div class="rightMenu" name="__home_baireci">
@@ -226,8 +227,23 @@ class MainBox {
     }
     $(".delBox").remove();
   }
-  //楼层悬浮
-  $
+  //楼层电梯
+  floorEle() {
+    $(() => {
+      //获取内容盒子距离窗口顶部距离
+      let mainTop = $(".smallImg").offset().top;
+      console.log("++++++++++++++");
+      
+      $(window).scroll(function () {
+        if ($(document).scrollTop() >= mainTop) {
+          $(".fixDiv").show(1000); 
+        } else {
+          $(".fixDiv").hide(2000);
+        }
+
+      });
+    })
+  }
 
 }
 
