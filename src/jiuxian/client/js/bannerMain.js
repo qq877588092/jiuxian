@@ -1,9 +1,9 @@
-class PlayBanner {
+class PlayBannerMain {
     constructor(data) {
         this.data = data;
         this.index = 0;
-        this.width = 820;
-        this.name=".bannerBox";
+        this.width = 210;
+        this.name = ".bannerBoxmin";
     }
     //接口
     init() {
@@ -24,8 +24,8 @@ class PlayBanner {
             }
     
             ${name} .slider {
-                width: 820px;
-                height: 470px;
+                width: 210px;
+                height: 485px;
                 overflow: hidden;
                 position: relative;
             }
@@ -33,7 +33,7 @@ class PlayBanner {
             ${name} .slider-box {
                 background: #dddddd;
                 width: 10000px;
-                height: 470px;
+                height: 485px;
                 padding: 0;
                 margin: 0;
                 position: absolute;
@@ -41,17 +41,17 @@ class PlayBanner {
             }
     
             ${name} .slider-box-item {
-                width: 820px;
-                height: 470px;
+                width: 210px;
+                height: 485px;
                 float: left;
                 font-size: 40px;
                 text-align: center;
-                line-height: 470px;
+                line-height: 485px;
             }
     
             ${name} .slider-box-item img {
-                width: 820px;
-                height: 470px;
+                width: 210px;
+                height: 485px;
             }
     
             ${name} .slider-control {
@@ -79,8 +79,8 @@ class PlayBanner {
     
             ${name} .slider-nav {
                 position: absolute;
-                right: 30px;
-                bottom: 10px;
+                right: 68px;
+                bottom: -8px;
                 height: 30px;
             }
     
@@ -91,8 +91,8 @@ class PlayBanner {
                 border-radius: 5px;
                 margin: 0 5px;
                 text-align: center;
-                width: 8px;
-                height: 8px;
+                width: 12px;
+                height: 12px;
                 line-height: 8px;
             }
     
@@ -101,10 +101,10 @@ class PlayBanner {
                 display: block !important;
             }
     
-            ${name} .box {
+            ${name} .bannerBoxmin {
                 margin: 0px auto;
                 width: 822px;
-                height: 470px;
+                height: 485px;
                 z-index: -1;
             }
     
@@ -131,7 +131,7 @@ class PlayBanner {
             ${name} .ulB {
                 position: absolute;
                 width: 996px;
-                height: 470px;
+                height: 485px;
                 background: #fff;
                 top: 0px;
                 left: 234px;
@@ -181,8 +181,12 @@ class PlayBanner {
         this.slider.appendChild(this.SliderBox);
         this.slider.appendChild(this.SliderControl);
         this.slider.appendChild(this.SliderNav);
-        document.querySelector(".box").appendChild(this.slider);
 
+        let bannerBoxmin = document.createElement("div");
+        bannerBoxmin.className = "bannerBoxmin";
+        bannerBoxmin.appendChild(this.slider);
+        document.querySelector(".delBox").appendChild(bannerBoxmin);
+        
     }
     //创建外层大盒子
     createSlider() {
@@ -202,7 +206,7 @@ class PlayBanner {
         this.SliderControl = document.createElement("div");
         this.SliderControl.className = "slider-control";
         this.SliderControl.innerHTML =
-            ` <span class="prev iconfont icon-jiantouzuo"></span> <span class="next iconfont icon-jiantouyou"></span>`;
+            ` `;
     }
     //创建焦点
     createSliderNav() {
@@ -271,28 +275,3 @@ class PlayBanner {
         this.slider.onmouseleave = () => this.playImg();
     }
 }
-
-
-// let p1 = new PlayBanner([
-//     "http://img07.jiuxian.com/brandlogo/2019/1217/274b092fe1244e09950f651a12e92518.jpg",
-//     "images/banner1.png",
-//     "images/banner2.png",
-// ]);
-// p1.init();
-
-// let xhr = new XMLHttpRequest;
-// xhr.open("get", "http://127.0.0.1/code/day25/task/playbanner.php", true);
-// xhr.send();
-// xhr.onreadystatechange = function () {
-//     if (xhr.readyState == 4 && xhr.status == 200) {
-//         var data = JSON.parse(xhr.responseText);
-//         let p1 = new PlayBanner([
-//             "http://img07.jiuxian.com/brandlogo/2019/1217/274b092fe1244e09950f651a12e92518.jpg",
-//             "images/banner1.png",
-//             "images/banner2.png",
-//         ]);
-//         p1.init();
-//     } else {
-//         console.log("sb" + xhr.responseText);
-//     }
-// }

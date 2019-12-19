@@ -839,7 +839,48 @@ body {
 .spiritListPrice strong{ font-size:12px; font-weight:normal; font-family:"å¾®è½¯é›…é»‘"; color:#CD0100; display:inline; vertical-align:middle;}
 .topTenWrap{ height:161px; border-left:1px solid #ececec; border-right:1px solid #ececec; border-bottom:1px solid #ececec;}
 .hotWordBox{ float: left; width:186px; border-right:1px solid #ececec; background:#f9f9f9; height:131px; padding:20px 10px 10px 14px;}
-
+/* 楼层悬浮样式 */
+.fixDiv{
+  position: absolute;
+	_display:none;
+	width:40px;
+	height:205px;
+	left:50%;
+	margin-left:-550px;
+	top:800px;
+	z-index:0;
+	opacity:0;
+	transform:scaleY(1.5);
+	-webkit-transform:scaleY(1.5);
+	-moz-transform:scaleY(1.5);
+	-o-transform:scaleY(1.5);
+	-ms-transform:scaleY(1.5);
+	transition:.5s transform, .5s opacity;
+	-o-transition:.5s transform, .5s opacity;
+	-moz-transition:.5s transform, .5s opacity;
+	-webkit-transition:.5s transform, .5s opacity;
+	-ms-transition:.5s transform, .5s opacity;
+	}
+.fixDiv div{ position:absolute; left:0; font-size:12px;  text-align:center; cursor:pointer; }
+.fixDiv a{ width:30px; height:30px; position:absolute; left:0; top:0; color:#fff; font-size:12px; text-align:center; border-radius:30px; line-height:30px; text-decoration:none; cursor:pointer;  overflow:hidden; font-family:"å¾®è½¯é›…é»‘" }
+.fixDiv .floorOne{ top:0;}
+.fixDiv .floorTwo{ top:31px;}
+.fixDiv .floorThree{ top:62px;}
+.fixDiv .floorFour{ top:93px;}
+.fixDiv .floorFive{ top:124px;}
+.fixDiv .floorOneOn{ background:#d43d4e;z-index:1;display:none}
+.fixDiv .floorTwoOn{ background:#c2782f;z-index:1;display:none}
+.fixDiv .floorThreeOn{ background:#296693;z-index:1;display:none}
+.fixDiv .floorFourOn{ background:#6c9d0e;z-index:1;display:none}
+.fixDiv .floorFiveOn{ background:#fe7a65;z-index:1;display:none}
+.fixDiv .floorBg{ background:#f1f1f1; z-index:2; }
+.fixDiv .floorOneBg i{ width:12px; height:20px; background-position:0 -181px; position:absolute; left:9px; top:5px;}
+.fixDiv .floorTwoBg i{width:8px; height:21px; background-position: -18px -180px; position:absolute; left:11px; top:5px}
+.fixDiv .floorThreeBg i{width:20px; height:20px; background-position: -31px -181px; position:absolute; left:6px; top:5px}
+.fixDiv .floorFourBg i{ width:12px; height:19px; background-position: -56px -180px; position:absolute; left:9px; top:5px;}
+.fixDiv .floorFiveBg i{ width:15px; height:16px; background-position: -39px -213px; position:absolute; left:8px; top:6px;}
+.fixDiv .floorBack{width:30px; height:30px; color:#fff; font-size:12px;  text-align:center; border-radius:30px; line-height:30px; position:absolute; left:0; cursor:pointer; top:155px; background:#f1f1f1;}
+.fixDiv .floorBack i{ width:15px; height:10px;position:absolute; left:8px; top:10px; background-position: -74px -190px;}
 
 
 

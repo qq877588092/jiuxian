@@ -69,14 +69,23 @@ class Subpage {
     }
 
 }
+$(() => {
+    $.ajax({
+        type: "get",
+        url: "http://127.0.0.1/code/jiuxian/src/jiuxian/server/subpage.php",
+        data: "data",
+        dataType: "json",
+        success: function (response) {
+            var p1 = new Subpage(response);
+            p1.init();
+        }
+    });
+    let p1 = new PlayBanner([
+        "http://img07.jiuxian.com/brandlogo/2019/1217/274b092fe1244e09950f651a12e92518.jpg",
+        "images/banner1.png",
+        "images/banner2.png",
+    ]);
+    p1.init();
+      
 
-$.ajax({
-    type: "get",
-    url: "http://127.0.0.1/code/jiuxian/src/jiuxian/server/subpage.php",
-    data: "data",
-    dataType: "json",
-    success: function (response) {
-        var p1 = new Subpage(response);
-        p1.init();
-    }
-});
+})

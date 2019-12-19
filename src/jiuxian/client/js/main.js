@@ -10,7 +10,7 @@ class MainBox {
   renderUI() {
     this.createMain();
     this.toggleShop();
-    // this.createEvent();
+    this.smallBanner();
   }
   //创建main标签
   createMain() {
@@ -162,7 +162,7 @@ class MainBox {
 
 
           <div class="spiritWrap">
-          <div class="bannerBoxmin"></div>
+          
           <div class="spiritList" name="__home_baidanpin">
           <ul class="clearfix news">
             ${item4}
@@ -192,10 +192,8 @@ class MainBox {
             </div>
           </div><!-- 白酒馆本周热销商品Start -->
           <div class="topTenConWrap" name="__home_baipaihang">
-            <div class="topTenCon">
-                
+            <div class="topTenCon">  
                 ${item11}
-                
             </div>
           </div><!-- 白酒馆本周热销商品End -->
         </div>
@@ -209,16 +207,25 @@ class MainBox {
   //点击切换热销商品
   toggleShop() {
     $(".topTenNav a").click(function () {
-      $(this).parent().parent().siblings(".topTenConWrap").find("ul").eq($(this).index()).toggle();  
+      $(this).parent().parent().siblings(".topTenConWrap").find("ul").eq($(this).index()).toggle();
     })
   }
 
-
   //内容区小banner
-  // smallBanner() {
-
-  // }
-
+  smallBanner() {
+    let data = this.data.map((ele, index) => {
+      return ele.leftbigImg;
+    })
+    for (let i = 0; i < data.length; i++) {
+      let p2 = new PlayBannerMain(data[i]);
+      p2.init();
+    }
+    //循环删除插入页面尾部的标签，再复制删除
+    for (let i = 0; i < $(".bannerBoxmin").length; i++) {
+      $(".bannerBoxmin").eq(i).appendTo($(".spiritWrap").eq(i));
+    }
+    $(".delBox").remove();
+  }
 }
 
 $.ajax({
