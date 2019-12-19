@@ -209,9 +209,7 @@ class MainBox {
   //点击切换热销商品
   toggleShop() {
     $(".topTenNav a").click(function () {
-      $(this).parent().parent().siblings(".topTenConWrap").find("ul").eq($(this).index()).show();
-    
-
+      $(this).parent().parent().siblings(".topTenConWrap").find("ul").eq($(this).index()).toggle();  
     })
   }
 
