@@ -79,6 +79,7 @@ body {
   width: 72px;
   border-top: 0;
   background-color: #fff;
+  z-index: 888;
 }
 
 .topheadderRight .userinfo a {

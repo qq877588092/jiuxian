@@ -228,22 +228,20 @@ class MainBox {
     $(".delBox").remove();
   }
   //楼层电梯
-  floorEle() {
-    $(() => {
-      //获取内容盒子距离窗口顶部距离
-      let mainTop = $(".smallImg").offset().top;
-      console.log("++++++++++++++");
-      
-      $(window).scroll(function () {
-        if ($(document).scrollTop() >= mainTop) {
-          $(".fixDiv").show(1000); 
-        } else {
-          $(".fixDiv").hide(2000);
-        }
+  // floorEle() {
+  //   $(() => {
+  //     //获取内容盒子距离窗口顶部距离
+  //     let mainTop = $(".smallImg").offset().top;
+  //     $(window).scroll(function () {
+  //       if ($(document).scrollTop() >= mainTop) {
+  //         $(".fixDiv").show(1000); 
+  //       } else {
+  //         $(".fixDiv").hide(2000);
+  //       }
 
-      });
-    })
-  }
+  //     });
+  //   })
+  // }
 
 }
 

@@ -56,6 +56,8 @@ class Subpage {
     //鼠标移入显示侧边栏
     createEvent() {
         $(".sortBox li").hover(function () {
+            console.log("++++++++++++");
+            
             $(this).addClass("liarticlebg").siblings().removeClass("liarticlebg");
             $(this).addClass("borderLi").siblings().removeClass("borderLi");
             $(this).parent().siblings(".menuBox").eq($(this).index()).show().siblings(".menuBox").hide();
