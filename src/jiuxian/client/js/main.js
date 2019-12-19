@@ -226,6 +226,9 @@ class MainBox {
     }
     $(".delBox").remove();
   }
+  //楼层悬浮
+  $
+
 }
 
 $.ajax({
