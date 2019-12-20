@@ -595,7 +595,7 @@ body {
     line-height: 20px;
 }
 
-2 .sOtherRight {
+.sOtherRight {
     float: right;
     line-height: 20px;
 }
@@ -618,18 +618,6 @@ body {
     padding-left: 10px;
 }
 
-.showCollect i {
-    display: inline-block;
-    position: absolute;
-    top: -13px;
-    left: -7px;
-    width: 13px;
-    height: 12px;
-    background: url(../images/d-icon.png) no-repeat 0 0;
-    background-position: -148px -14px;
-
-
-}
 
 .showCollect span {
     display: inline-block;

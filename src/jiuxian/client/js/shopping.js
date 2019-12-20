@@ -70,8 +70,6 @@ function getMysql(index) {
         data: "page=" + index,
         dataType: "json",
         success: function (response) {
-            console.log(response);
-            
             let p1 = new Shopping(response);
             p1.init();
         }
