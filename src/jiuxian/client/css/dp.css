@@ -1,0 +1,802 @@
+@charset "utf-8";
+
+body {
+    font-size: 12px;
+
+}
+
+/* 通用样式 */
+
+.topheadderCon,
+.bottomheaderCon,
+.navBox,
+.footerTop,
+.footerBottom,
+.bottomBox,
+.mainBox {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.topheader,
+.bottomheader,
+.nav,
+.footer,
+.main {
+    min-width: 1200px;
+}
+
+.topheader {
+    background: #f2f2f2;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.topheadderCon {
+    height: 26px;
+    line-height: 26px;
+}
+
+.topheadderLeft {
+    float: left;
+}
+
+.topheadderLeft p {
+    float: left;
+    color: #999;
+}
+
+.topheadderLeft a {
+    float: left;
+    color: #999;
+    padding-right: 8px;
+}
+
+.topheadderRight {
+    float: right;
+}
+
+.topheadderRight a {
+    color: #999;
+}
+
+.topheadderRight li {
+    float: left;
+    margin-right: 10px;
+}
+
+.topheadderRight .jt {
+    display: block;
+    width: 10px;
+    height: 10px;
+    background: url(../images/public-24.png)no-repeat -99px 3px;
+    float: right;
+    margin: 10px 0px 0px 3px;
+}
+
+.wodejiuxian {
+    position: relative;
+}
+
+.topheadderRight .userinfo {
+    position: absolute;
+    top: 26.5px;
+    left: -7px;
+    width: 72px;
+    border-top: 0;
+    background-color: #fff;
+    z-index: 888;
+}
+
+.topheadderRight .userinfo a {
+    text-align: center;
+    display: block;
+}
+
+.topheadderRight .bgColor {
+    background-color: #fff;
+}
+
+.topheadderRight li:nth-of-type(1) {
+    width: 61px;
+    padding: 0 4px 0 7px;
+}
+
+.topheadderRight .gwc {
+    display: block;
+    width: 12px;
+    height: 12px;
+    background: url(../images/public-24.png)no-repeat -18px 1px;
+    float: left;
+    margin: 7px 5px 0px 0px;
+}
+
+.topheadderRight .phone {
+    width: 12px;
+    height: 12px;
+    background: url(../images/public-24.png)no-repeat -62px 0px;
+    float: left;
+    margin: 3px 3px 0px 0px;
+}
+
+.ewmphone {
+    width: 86px;
+    height: 86px;
+    background: #fff;
+    margin-top: 6px;
+    padding: 4px 0 0 4px;
+}
+
+.userServe {
+    width: 62px;
+    height: 86px;
+    background: #fff;
+    margin-top: 0px;
+    padding: 4px 10px 0 14px;
+    position: absolute;
+}
+
+.topheadderRight .lb {
+    width: 12px;
+    height: 12px;
+    background: url(../images/public-24.png)no-repeat -80px 0px;
+    float: left;
+    margin: 7px 5px 0px 0px;
+}
+
+.topheadderRight .jt2 {
+    display: block;
+    width: 10px;
+    height: 10px;
+    background: url(../images/public-24.png)no-repeat -99px 3px;
+    float: right;
+    margin: 10px 0px 0px 3px;
+}
+
+.topheadderRight .kh {
+    width: 12px;
+    height: 12px;
+    background: url(../images/public-24.png)no-repeat -90px -265px;
+    float: left;
+    margin: 7px 5px 0px 6px;
+}
+
+.topheadderRight .jt3 {
+    display: block;
+    width: 10px;
+    height: 10px;
+    background: url(../images/public-24.png)no-repeat -99px 3px;
+    float: right;
+    margin: 10px 8px 0px 3px;
+}
+
+.topheadderRight li:nth-of-type(2) {
+    color: #c00;
+}
+
+.topheadderRight li:nth-of-type(4) {
+    color: #c00;
+}
+
+.topheadderRight li:nth-of-type(6) a {
+    display: block;
+    line-height: 16px;
+    background: #c00;
+    color: #fff;
+    margin-top: 5px;
+    padding: 0 2px;
+    text-align: center;
+}
+
+.topheadderRight li:nth-of-type(8) {
+    text-align: center;
+}
+
+/* 头部区最底部 */
+
+.bottomheaderCon {
+    height: 125px;
+}
+
+.bottomheaderLogo {
+    padding-top: 30px;
+    width: 257px;
+}
+
+.bottomheaderLogo p:nth-of-type(1) {
+    float: left;
+    margin-right: 10px;
+}
+
+.bottomheaderLogo p:nth-of-type(2) {
+    float: left;
+}
+
+.bottomheaderSearch {
+    float: left;
+    width: 540px;
+    margin: 2px 0 0 20px;
+}
+
+.bottomheaderSearch .search {
+    height: 32px;
+    border: 3px solid #c00;
+}
+
+.bottomheaderSearch .searchErea {
+    float: left;
+    width: 439px;
+    height: 22px;
+    margin: 5px;
+}
+
+.bottomheaderSearch .searchBtn {
+    float: right;
+    width: 85px;
+    height: 32px;
+    color: #fff;
+    text-align: center;
+    line-height: 32px;
+    font-size: 18px;
+    background-color: #c00;
+}
+
+.bottomheaderSearch .hot {
+    margin-top: 5px;
+}
+
+.bottomheaderSearch .hot a {
+    display: block;
+    float: left;
+    padding: 0 8px;
+    position: relative;
+    color: #999;
+}
+
+.bottomheaderSearch .hot s {
+    float: right;
+    display: block;
+    border-right: 1px solid #999;
+    font-size: 0;
+    height: 12px;
+    position: absolute;
+    left: 0px;
+    top: 3px;
+}
+
+.bottomheaderSearch .hot a:nth-of-type(1) s:nth-of-type(1) {
+    border-right: none;
+}
+
+.bottomheaderServe {
+    width: 363px;
+    height: 64px;
+    float: right;
+    background: url(../images/headerProPic1.png)no-repeat;
+}
+
+/* 导航 */
+
+.nav {
+    background: #900;
+    height: 34px;
+}
+
+.navBox {
+    height: 34px;
+    color: #fff;
+    line-height: 34px;
+}
+
+.shoppingSort {
+    width: 190px;
+    float: left;
+    text-align: center;
+    position: relative;
+}
+
+.shoppingSort h2 {
+    background-color: rgb(206, 23, 31);
+}
+
+.navLeft {
+    float: left;
+    font-size: 14px;
+}
+
+.navLeft li {
+    float: left;
+}
+
+.navLeft a {
+    display: block;
+    padding: 0 22px;
+    color: #fff;
+}
+
+.navLeft a:hover {
+    background: #b40c10;
+}
+
+.navRight {
+    float: right;
+}
+
+.navRight a {
+    width: 120px;
+    height: 34px;
+}
+
+.sortBox {
+    background-color: #fff;
+    width: 186px;
+    height: 468px;
+    border: 2px solid;
+    border-color: rgb(204, 0, 0);
+    border-top: 0;
+    position: absolute;
+    z-index: 888;
+}
+
+.sortBox li {
+    width: 183px;
+    height: 81px;
+    border-bottom: 1px solid #e4e4e4;
+    border-left: 3px solid #fff;
+    overflow: hidden;
+}
+
+.liarticlebg {
+    background: #F1F1F1;
+    color: #fff;
+}
+
+.sortBox li:nth-of-type(6) {
+    height: 58px;
+}
+
+.sortBox .borderLi {
+    border-left: 3px solid #c00;
+}
+
+.sortBox li h3 {
+    height: 20px;
+    padding: 10px 0 6px 10px;
+}
+
+.sortCon i {
+    float: left;
+    display: block;
+    width: 16px;
+    height: 20px;
+    background: url(../images/public-24.png)no-repeat -73px -260px;
+}
+
+.sortCon a {
+    float: left;
+    display: block;
+    line-height: 20px;
+    margin-left: 10px;
+    color: #333;
+}
+
+.sortBox p {
+    line-height: 20px;
+    padding: 0 22px;
+}
+
+.sortBox p a {
+    color: #666;
+    padding-right: 5px;
+}
+
+/* 右侧二级栏 */
+
+.menuBox {
+    width: 615px;
+    height: 470px;
+    position: absolute;
+    left: 188px;
+    top: 34px;
+    box-shadow: 0 0 4px 0 #ccc;
+    z-index: 900;
+}
+
+.menuBox .menuCon {
+    width: 395px;
+    height: 470px;
+    float: left;
+    display: block;
+    background: #F1F1F1;
+    overflow: hidden;
+}
+
+.menuItemTitle {
+    width: 100px;
+    float: left;
+    background: #F1F1F1;
+    color: #666;
+}
+
+.menuCon-list {
+    width: 295px;
+    float: left;
+    background: #fff;
+}
+
+.menuCon-list p {
+    float: left;
+    line-height: 22px;
+    max-height: 176px;
+    margin: 10px 10px 10px 10px;
+    overflow: hidden;
+    border-bottom: 1px dashed #999;
+    padding-bottom: 10px;
+}
+
+.menuCon-list a {
+    float: left;
+    display: block;
+    padding: 0 8px;
+    font-size: 12px;
+    color: #666;
+}
+
+.menuCon-list s {
+    float: left;
+    width: 1px;
+    background-color: #999;
+    height: 10px;
+    font-size: 0px;
+    position: relative;
+    top: 7px;
+}
+
+.menuFoc {
+    width: 220px;
+    height: 470px;
+    float: right;
+    background: pink;
+}
+
+/* 内容区 */
+.main {
+    background-color: #fff;
+}
+
+.mainBox {
+    min-height: 500px;
+    z-index: 1;
+
+}
+
+.dTop {
+    height: 70px;
+    overflow: hidden;
+    padding-top: 10px;
+}
+
+.dGuide {
+    height: 40px;
+    line-height: 40px;
+    margin-bottom: 10px;
+}
+
+.dGuide a {
+    color: #666;
+}
+
+.dGuide .d-cur {
+    color: #cc3333;
+}
+
+.shopDp {
+    border: 1px solid #f2f2f2;
+}
+
+/* 商品详情左侧 */
+.shopDpleft {
+    float: left;
+    width: 440px;
+    background-color: pink;
+}
+
+.dpBinImg {
+    width: 420px;
+    height: 420px;
+    padding: 10px;
+}
+
+.dpBinImg img {
+    width: 100%;
+    height: auto;
+}
+
+.dpSmallImg {
+    height: 64px;
+    padding-top: 5px;
+    background-color: red;
+}
+
+.show-list {
+    height: 64px;
+    padding-top: 5px;
+}
+
+.show-list-prev,
+.show-list-next {
+    display: block;
+    width: 14px;
+    height: 62px;
+    text-align: center;
+    padding-left: 14px;
+    float: left;
+    height: 64px;
+}
+.dIcon {
+    background: url(../images/d-icon.png) no-repeat 0 0;
+}
+
+
+
+.dpIntro {
+    height: 20px;
+    line-height: 20px;
+    background-color: yellowgreen;
+    padding: 22px 20px 0;
+}
+
+
+/* 商品详情中间 */
+.shopDpcenter {
+    float: left;
+    width: 548px;
+    min-height: 533px;
+    background-color: red;
+    padding: 10px 10px 10px 10px;
+}
+
+/* 商品详情右侧 */
+.shopDpbottom {
+    float: left;
+    width: 200px;
+    background-color: yellowgreen;
+}
+
+
+
+
+
+/* 页脚 */
+footer {
+    background-color: #f9f9f9;
+}
+
+.topBox {
+    width: 100%;
+    background-color: #333;
+}
+
+.footerTop {
+
+    margin: 0 auto;
+    height: 84px;
+    border-bottom: 1px solid #494949;
+}
+
+.footerBottom {
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 30px 0 60px;
+}
+
+.footerTop .footerContact {
+    float: left;
+    height: 40px;
+    line-height: 40px;
+    padding: 22px 0px;
+}
+
+.footerContact i {
+    float: left;
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin-right: 18px;
+    background: url(../images/public-24.png)no-repeat;
+    background-position: -144px -22px;
+}
+
+.footerContact b {
+    float: left;
+    font-size: 24px;
+    color: #c00;
+    margin-right: 25px;
+
+}
+
+.footerContact span {
+    float: left;
+    display: block;
+    font-size: 14px;
+    color: #fff;
+    margin-right: 8px;
+    line-height: 40px;
+}
+
+.footerTop .footerTopRight {
+    float: right;
+    height: 32px;
+    padding: 26px 0;
+}
+
+.footerTopRight .ftRight-tit {
+    float: left;
+    line-height: 32px;
+    color: rgb(255, 255, 255);
+    padding-right: 10px;
+}
+
+.footerTopRight .ftRight-form {
+    float: left;
+    width: 240px;
+    height: 30px;
+    border: 1px solid #494949;
+    position: relative;
+    z-index: 99;
+}
+
+.footerTopRight .ftRight-form input {
+    width: 190px;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 6px;
+    background: 0;
+    border: 0;
+    float: left;
+    color: #fff;
+    outline: 0;
+}
+
+.footerTopRight .ftRight-form span {
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    color: #999;
+    position: absolute;
+    left: 6px;
+    top: 0;
+}
+
+.footerTopRight .ftRight-form i {
+    display: block;
+    width: 22px;
+    height: 18px;
+    background-position: -133px 0;
+    margin: 6px 0 0 10px;
+    cursor: pointer;
+    float: left;
+}
+
+.footerBottom {
+    overflow: hidden;
+    padding: 30px 0 60px;
+}
+
+.footerBottom ul li {
+    float: left;
+    padding: 10px;
+    margin-right: 80px;
+
+}
+
+.footerBottom ul li h3 {
+    color: #fff;
+
+}
+
+.footerBottom ul li span {
+    float: left;
+    display: block;
+    padding-left: 8px;
+    padding-bottom: 8px;
+}
+
+.footerBottom ul li i {
+    float: left;
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    background: url(../images/public-24.png)no-repeat 0 -131px;
+}
+
+.footerBottom ul li p {
+    padding-left: 35px;
+    color: #ccc;
+    line-height: 30px;
+}
+
+.footerBottom .liz {
+    margin: 0;
+    color: #fff;
+}
+
+.footerBottom .liz span {
+    padding-top: 5px;
+}
+
+.footerBottom ul li div {
+    height: 40px;
+
+}
+
+.footerBottom .rightFont1 {
+    float: left;
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    background: url(../images/public-24.png)no-repeat -140px -74px;
+}
+
+.footerBottom .rightFont2 {
+    float: left;
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    background: url(../images/public-24.png)no-repeat -103px -74px;
+}
+
+.bottomBox {
+    margin-top: 20px;
+}
+
+.bottomBoxLeft {
+    float: left;
+    height: 200px;
+    width: 780px;
+
+}
+
+.bottomBoxRight {
+    width: 340px;
+    height: 200px;
+    float: left;
+}
+
+.bottomBoxLeft p {
+    padding: 10px;
+    color: #999;
+    height: 16px;
+}
+
+.bottomBoxLeft .yz {
+    height: 40px;
+}
+
+.bottomBoxLeft p span {
+    display: block;
+
+    float: left;
+    margin-right: 10px;
+}
+
+.bottomBoxLeft .xp {
+    float: none;
+}
+
+.bottomBoxRight p {
+    width: 100px;
+    height: 100px;
+    padding-top: 10px;
+}
+
+.bottomBoxRight p img {
+    width: 100%;
+    height: 100%;
+}
+
+.bottomBoxRight div {
+    float: left;
+    margin-right: 40px;
+    margin-top: 30px;
+    text-align: center;
+}

@@ -8,7 +8,7 @@
   <title>Document</title>
   <link rel="stylesheet" href="font_1459788_i582iz5g31s/iconfont.css">
   <link rel="stylesheet" href="css/common.css">
-  <link rel="stylesheet" href="css/subpage.css">
+  <link rel="stylesheet" href="css/dp.css">
   <script src="js/jquery-3.4.1.js"></script>
   <script src="../server/sidebar.json"></script>
   <script src="js/shopping.js"></script>
@@ -31,13 +31,13 @@
                 <div class="wodejiuxian">
                   <a href="">我的酒仙</a>
                   <i class="jt"></i>
-                                <div class="userinfo" style="display: none;">
-                  <a href="javascript:;">我的订单</a>
-                  <a href="javascript:;">物流跟踪</a>
-                  <a href="javascript:;">我的优惠券</a>
+                  <div class="userinfo" style="display: none;">
+                    <a href="javascript:;">我的订单</a>
+                    <a href="javascript:;">物流跟踪</a>
+                    <a href="javascript:;">我的优惠券</a>
+                  </div>
                 </div>
-                </div>
-  
+
               </li>
               <li>CEO邮箱</li>
               <li>
@@ -77,9 +77,6 @@
             </ul>
         </div>
       </div>
-    </div>
-    <div class="biglogo">
-      <a style="background: url(images/80c68ea8615a4b6b8b93a331646f0fce.jpg)no-repeat top center;" href="#"></a>
     </div>
     <div class="bottomheader">
       <div class="bottomheaderCon">
@@ -156,7 +153,56 @@
 
     <!-- main内容区 -->
     <section class="main">
-      
+      <div class="mainBox">
+        <div class="dTop"><a href="">
+            <img src="http://img06.jiuxian.com/bill/2019/0919/15b4153e073d4eb99e42fca305f5f3b8.jpg" width="1200"
+              height="70">
+          </a>
+        </div>
+        <div class="dGuide">
+          <a target="_self" href="">首页</a><i>&gt;</i><a href="" target="_self">白酒</a><i>&gt;</i>
+          <a href="" target="_self">茅台</a>
+          <i>&gt;</i><span class="d-cur">51°茅台汉酱酒500ml（6瓶装）</span>
+        </div>
+        <div class="shopDp news">
+          <div class="shopDpleft">
+            <div class="dpBinImg">
+              <img src="http://img09.jiuxian.com/2017/0803/6ce2bdc8ad8e4c59936661b86301e77c5.jpg"
+                jqimg="http://img09.jiuxian.com/2017/0803/6ce2bdc8ad8e4c59936661b86301e77c6.jpg" alt="">
+            </div>
+            <div class="dpSmallImg">
+              <a class="show-list-prev" href="javascript:;"><i class="dIcon"></i></a>
+              <div class="show-list-con">
+                <ul class="clearfix">
+                  <li class=""><a href="javascript:;"><img
+                        src="http://img10.jiuxian.com/2017/0803/6ce2bdc8ad8e4c59936661b86301e77c1.jpg" width="54"
+                        height="54" onmouseover="showLN(0)"></a></li>
+                  <li class="on"><a href="javascript:;"><img
+                        src="http://img06.jiuxian.com/2013/1002/87878a99239f4f9faec6b001acebec801.jpg" width="54"
+                        height="54" onmouseover="showLN(1)"></a></li>
+                  <li class=""><a href="javascript:;"><img
+                        src="http://img07.jiuxian.com/2013/1105/f270a06693c048c09b2986d68cd5f1921.jpg" width="54"
+                        height="54" onmouseover="showLN(2)"></a></li>
+                  <li class=""><a href="javascript:;"><img
+                        src="http://img08.jiuxian.com/2013/1002/7c6613760fcb48838aec08fed50d17501.jpg" width="54"
+                        height="54" onmouseover="showLN(3)"></a></li>
+                  <li class=""><a href="javascript:;"><img
+                        src="http://img07.jiuxian.com/2013/1002/a56108b468544ef7aaf1657db3da2d681.jpg" width="54"
+                        height="54" onmouseover="showLN(4)"></a></li>
+                </ul>
+              </div>
+              <a class="show-list-next" href="javascript:;"><i class="dIcon"></i></a>
+            </div>
+            <div class="dpIntro"></div>
+          </div>
+          <div class="shopDpcenter">
+
+          </div>
+          <div class="shopDpbottom">
+
+          </div>
+        </div>
+      </div>
     </section>
     <!-- 页尾 -->
     <footer>
@@ -268,54 +314,6 @@
       </div>
     </footer>
 
-
-
-    <script>
-      //获取数据
-      // var arr = [];
-      // for (i = 0; i < $(".catItem").length; i++) {
-      //   var obj = {
-      //     leftName1: "",
-      //     leftName2: "",
-      //     rightName1: "",
-      //     rightName2: "",
-      //     src: ""
-      //   };
-      //   obj.leftName1 = $(".catItemCon h3")[i].innerText;
-      //   // obj.leftName2 =$(".catItem .categoryCon")[i].children.innerText;
-      //   var arr1 = [];
-      //   for (k = 0; k < $(".catItem .categoryCon").eq(i).children().find("a").length; k++) {
-      //     arr1.push($(".catItem .categoryCon").eq(i).children().find("a").eq(k).text());
-      //   }
-      //   var s1 = $(".catItem").parent().siblings(".menuBox").children(".menuCon").eq(i).find("h4").map(function (index,
-      //     ele) {
-
-      //       return obj.rightName1 = ele.innerText;
-
-
-      //   })
-      //   var s2 = $(".catItem").parent().siblings(".menuBox").children(".menuFoc").eq(i).find("img").map(function (index,
-      //     ele) {
-      //     return obj.src = ele.src;
-      //   })
-      //   var s3 = $(".catItem").parent().siblings(".menuBox").children(".menuCon").eq(i).find("a").map(function (index,
-      //     ele) {
-
-      //       return obj.rightName2 = ele.innerText;
-
-      //   })
-
-
-      //   obj.rightName1 =Array.from(s1);
-      //   obj.src = s2[0];
-      //   obj.rightName2 =Array.from(s3);
-      //   obj.leftName2 = arr1;
-      //   arr.push(obj);
-      // }
-      // console.log(arr);
-
-      // JSON.stringify(arr);
-    </script>
 
 </body>
 
