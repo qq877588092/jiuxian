@@ -12,7 +12,6 @@ class Subpage {
         this.createMenu();
         this.createEvent();
         this.showBox();
-        this.dpBox();
     }
     //创建标签
     createBox() {
@@ -80,17 +79,8 @@ class Subpage {
         })
     }
     //商品详情跳转
-    dpBox() {
         /* 002-给标签添加点击事件，当点击标签的时候打开详情页 */
-        $(".showBox2").click(function () { 
-            let src=$(this).children("div").children("img")[0].src;
-            let name=$(this).children("div").children("h6")[0].innerText;
-            let price=$(this).children("div").children("h3")[0].innerText;
 
-            let queryString=`src=${src}&name=${name}&price=${price}`;
-            console.log(queryString);
-            window.location.href= "http://127.0.0.1/code/jiuxian/src/jiuxian/client/dp.html?" + queryString;
-        })
         // for (var i = 0, len = oLis.length; i < len; i++) {
         //     var oLi = oLis[i];
         //     oLi.index = i; /* 把i保存到标签的身上 */
@@ -109,7 +99,6 @@ class Subpage {
         //         window.location.href = "http://127.0.0.1/code/jiuxian/src/jiuxian/client/dp.html?" + queryString;
         //     }
         // }
-    }
 
 }
 
@@ -121,5 +110,6 @@ $.ajax({
     success: function (response) {
         var p1 = new Subpage(response);
         p1.init();
+        
     }
 });

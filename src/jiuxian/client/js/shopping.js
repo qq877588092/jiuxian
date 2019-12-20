@@ -1,18 +1,19 @@
 class Shopping {
-    constructor(data) {
-        this.data = data;
-    }
-    //接口
-    init() {
-        this.renderUI();
-    }
-    //渲染
-    renderUI() {
-        this.createShop();
-    }
-    createShop() {
-        let html = this.data.map((ele) => {
-            return `
+  constructor(data) {
+    this.data = data;
+  }
+  //接口
+  init() {
+    this.renderUI();
+  }
+  //渲染
+  renderUI() {
+    this.createShop();
+    this.dpBox();
+  }
+  createShop() {
+    let html = this.data.map((ele) => {
+      return `
             <li>
             <div class="showBox1" style="display: none;">
             </div>
@@ -57,23 +58,35 @@ class Shopping {
             </div>
           </li>
           `
-        })
-        $(".productShow ul").html(html);
-    }
+    })
+    $(".productShow ul").html(html);
+  }
+  dpBox() {
+    $(".showBox2").click(function () {
+      let src = $(this).children("div").children("img")[0].src;
+      let name = $(this).children("div").children("h6")[0].innerText;
+      let price = $(this).children("div").children("h3")[0].innerText;
+
+      let queryString = `src=${src}&name=${name}&price=${price}`;
+      console.log(queryString);
+      window.location.href = "http://127.0.0.1/code/jiuxian/src/jiuxian/client/dp.html?" + queryString;
+    })
+  }
+
 
 }
 
 function getMysql(index) {
-    $.ajax({
-        type: "get",
-        url: "http://127.0.0.1/code/jiuxian/src/jiuxian/server/getMysql.php",
-        data: "page=" + index,
-        dataType: "json",
-        success: function (response) {
-            let p1 = new Shopping(response);
-            p1.init();
-        }
-    });
+  $.ajax({
+    type: "get",
+    url: "http://127.0.0.1/code/jiuxian/src/jiuxian/server/getMysql.php",
+    data: "page=" + index,
+    dataType: "json",
+    success: function (response) {
+      let p1 = new Shopping(response);
+      p1.init();
+    }
+  });
 }
 
 //页面刷新获取第一页数据
@@ -81,18 +94,18 @@ getMysql(1);
 
 //后台获取页码生成标签
 $.ajax({
-    type: "get",
-    url: "http://127.0.0.1/code/jiuxian/src/jiuxian/server/getPage.php",
-    dataType: "json",
-    success: function (response) {
-        let count = response.count;
-        let html1 = "";
-        for (i = 0; i < count; i++) {
-            html1 +=
-                `<a class="number ${i==0?"on":""}">${i+1}</a>`
-        }
-        let html2 =
-            `
+  type: "get",
+  url: "http://127.0.0.1/code/jiuxian/src/jiuxian/server/getPage.php",
+  dataType: "json",
+  success: function (response) {
+    let count = response.count;
+    let html1 = "";
+    for (i = 0; i < count; i++) {
+      html1 +=
+        `<a class="number ${i==0?"on":""}">${i+1}</a>`
+    }
+    let html2 =
+      `
         <a href="javascript:void(0)" class="prevpage">上一页
           </a>
           ${html1}
@@ -100,11 +113,12 @@ $.ajax({
           <a href="#" class="nextpage">下一页</a>
           <span class="totalPage">共<em>${count}</em>页</span>
         `
-        $(".fanye").append(html2);
-        $(".fanye .number").click(function () {
-            $(this).addClass("on").siblings().removeClass("on");
-            //发请求获取数据
-            getMysql($(this).index());
-        })
-    }
+    $(".fanye").append(html2);
+    $(".fanye .number").click(function () {
+      $(this).addClass("on").siblings().removeClass("on");
+      //发请求获取数据
+      getMysql($(this).index());
+    })
+
+  }
 });
