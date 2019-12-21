@@ -11,7 +11,7 @@ class MainBox {
     this.createMain();
     this.toggleShop();
     this.smallBanner();
-    this.floorEle();
+    // this.floorEle();
   }
   //创建main标签
   createMain() {
