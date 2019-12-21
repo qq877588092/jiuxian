@@ -230,7 +230,7 @@
       } else {
         $.ajax({
           type: "post",
-          url: "http://127.0.0.1/code/src/jiuxian/server/register.php",
+          url: "http://127.0.0.1/code/jiuxian/src/jiuxian/server/register.php",
           data: `password=${$(".userpwd2").val()}&phone=${$(".userName").val()}`,
           dataType: "json",
           success: function (response) {

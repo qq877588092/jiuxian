@@ -1,0 +1,688 @@
+@charset "utf-8";
+body {
+  font-size: 12px;
+}
+
+a {
+  color: #666;
+}
+
+/* 通用样式 */
+
+.footerTop, .footerBottom, .topHeader, .midHeaderBox, .bottomBox {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.footer, .topHeaderWrap, .midHeader {
+  min-width: 1200px;
+}
+
+/* 头部 */
+
+.publicIcon {
+  background: url(../images/public-24.png) no-repeat;
+}
+
+.topHeaderWrap {
+  width: 100%;
+  height: 27px;
+  background: #f6f6f6;
+}
+
+.topHeader {
+  height: 27px;
+  line-height: 27px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 104;
+}
+
+.topCollect {
+  float: left;
+  height: 27px;
+  position: relative;
+  z-index: 100;
+  width: 400px;
+  overflow: hidden;
+}
+
+.topCollect ul li {
+  float: left;
+  margin-right: 5px;
+}
+
+.topHeaderWrap {
+  width: 100%;
+  height: 27px;
+  background: #f6f6f6;
+}
+
+.topRight li {
+  float: left;
+  height: 27px;
+  position: relative;
+  z-index: 9998;
+}
+
+.topRight {
+  float: right;
+  height: 27px;
+  position: relative;
+}
+
+.topRight li i {
+  background: #cfcfcf;
+  width: 1px;
+  font-size: 0;
+  height: 12px;
+  display: inline-block;
+  float: left;
+  margin: 8px 5px 0;
+}
+
+.topRight span {
+  float: left;
+  line-height: 27px;
+}
+
+.topRight .hotTel strong {
+  color: #ca1926;
+  font-style: italic;
+  font-size: 16px;
+  padding-left: 5px;
+}
+
+.midHeader {
+  background: #fff;
+  height: 90px;
+  width: 100%;
+}
+
+.midHeaderBox {
+  height: 90px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 102;
+}
+
+.jxwLogo {
+  float: left;
+  height: 63px;
+  margin-top: 20px;
+  width: 257px;
+}
+
+.jxwLogo .jxwIndex {
+  float: left;
+  width: 140px;
+}
+
+.jxwLogo .jxwIndex a {
+  display: block;
+  height: 63px;
+  width: 140px;
+}
+
+.bayProcess {
+  float: right;
+  margin-top: 25px;
+}
+
+.bayProcess .proPic {
+  width: 396px;
+  height: 27px;
+  background: url(../images/ch_icon.png) no-repeat;
+  margin: 0 26px 0 16px;
+}
+
+.bayProcess .proTex {
+  width: 438px;
+  height: 16px;
+  line-height: 16px;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-top: 8px;
+}
+
+.bayProcess .proTex .on {
+  color: #666;
+}
+
+.bayProcess .proTex span {
+  color: #aaa;
+  margin-right: 117px;
+}
+
+.bayProcess .proTex span {
+  color: #aaa;
+  margin-right: 117px;
+}
+
+/* gwc */
+
+.cartMain {
+  width: 1200px;
+  margin: 30px auto 0;
+  font-family: "微软雅黑";
+}
+
+.f-Prompt {
+  height: 34px;
+  line-height: 34px;
+  font-size: 0;
+  background: #fffcf8;
+  border: 1px solid #ffdeb0;
+  padding: 0 20px;
+  margin-bottom: 20px;
+}
+
+.f-Prompt i {
+  background-position: 0 -20px;
+  width: 13px;
+  height: 18px;
+  margin-right: 10px;
+}
+
+.f-Prompt span {
+  font-size: 12px;
+  color: #666666;
+}
+
+.f-Prompt i, .f-Prompt span {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.cart-t {
+  width: 100%;
+}
+
+.cart-filter-bar {
+  width: 100%;
+  height: 34px;
+}
+
+.my-cart-tit {
+  float: left;
+  font-weight: bolder;
+  color: #333;
+  font-size: 14px;
+  line-height: 34px;
+}
+
+.my-cart-tit span {
+  margin-left: 10px;
+  position: relative;
+  top: 1px;
+}
+
+.areaBox {
+  float: right;
+  position: relative;
+  height: 24px;
+  margin: 0px 0px 0px 10px;
+}
+
+.areaBox .selectArea {
+  float: left;
+  color: #666;
+  position: relative;
+  line-height: 22px;
+  height: 22px;
+  font-size: 12px;
+  border: 1px solid #cacaca;
+  display: inline-block;
+  background: #fff;
+  padding-left: 12px;
+  z-index: 112;
+}
+
+.areaBox .selectArea b {
+  float: left;
+  font-weight: normal;
+  padding-right: 6px;
+  color: #666;
+}
+
+.areaBox .selectArea i {
+  float: left;
+  display: inline-block;
+  width: 9px;
+  height: 5px;
+  background-position: 0 0;
+  vertical-align: middle;
+  margin: 9px 5px 0 0;
+}
+
+.my-distri-addr {
+  float: right;
+  height: 24px;
+  line-height: 24px;
+  color: #666;
+}
+
+.save-cart-info {
+  float: right;
+  height: 24px;
+  line-height: 24px;
+  color: #666666;
+  margin-right: 30px;
+}
+
+.save-cart-info a {
+  color: #0066cc;
+  margin: 0 5px;
+}
+
+.cart-thead {
+  height: 38px;
+  line-height: 38px;
+  border: 1px solid #e8e8e8;
+}
+.cart-checkbox{
+  float: left;
+  margin-left: 20px;
+}
+.cart-goods {
+  width: 400px;
+  float: left;
+  color: #999999;
+  text-indent: 93px;
+  text-align: left;
+}
+.cTab-tr {
+  float: left;
+  color: #999;
+  text-align: center;
+  min-height: 18px;
+}
+.cart-price {
+  width: 166px;
+}
+.cart-gold {
+  width: 124px;
+}
+.cart-quantity {
+  width: 142px;
+}
+.cart-subtotal {
+  width: 150px;
+}
+.cart-operating {
+  width: 120px;
+}
+.cart-tbody{
+  width: 1200px;
+}
+.gwclist{
+    border-top: 2px solid #b7b7b7;
+    border-right: 1px solid #e8e8e8;
+    border-left: 1px solid #e8e8e8;
+}
+.gwclist-shop{
+  background: #fffbf0;
+  margin: 20px 0;
+}
+.dx{
+  float: left;
+}
+.gwclist-shop .checkbox label {
+  display: block;
+  width: 24px;
+  margin-top: 12px;
+  cursor: pointer;
+  margin-left: 20px;
+}
+.gwclist-shop .checkbox input {
+  display: block;
+  width: 11px;
+  height: 11px;
+  border: 1px solid #ccc;
+}
+.shop_info{
+  width: 300px;
+    color: #999999;
+    text-align: left;
+    overflow: hidden;
+    margin-left: 60px;
+}
+.shop_img a{
+  display: block;
+  float: left;
+}
+.shop_name{
+  padding-top: 20px;
+  margin-left: 10px;
+  width: 200px;
+  float: left;
+  text-align: center;
+}
+.shop_price{
+  margin:30px 0 0 120px;
+}
+.shop_jb{
+  margin:30px 0 0 110px;
+}
+.shop_add{
+  width: 10px;
+  margin:30px 0 0 106px;
+}
+.shop_xj{
+  margin:30px 0 0 122px;
+}
+.shop_del{
+  margin:30px 0 0 110px;
+}
+.cart-gopay-bottom {
+  height: 60px;
+  background: #f8f8f8;
+  border: 1px solid #e8e8e8;
+  width: 1200px;
+  margin-top: 20px;
+  position: relative;
+}
+.cart-count {
+  float: right;
+  margin-right: 150px;
+  _display: inline;
+  padding: 5px 0;
+  height: 50px;
+}
+
+.cart-count div {
+  text-align: right;
+  height: 25px;
+  line-height: 25px;
+}
+.cart-gopay-btn {
+    width: 120px;
+    height: 62px;
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    z-index: 100;
+}
+.cart-count-total .pieces {
+  margin-right: 25px;
+  color: #333;
+}
+.cart-count-total .pieces em {
+  color: #e43a3d;
+  font-style: normal;
+  font-size: 16px;
+  margin: 0 5px;
+}
+.cart-count-offer span {
+  margin-left: 20px;
+}
+.cart-count div {
+  text-align: right;
+  height: 25px;
+  line-height: 25px;
+}
+.cart-count-offer {
+  color: #999;
+}
+.cart-gopay-btn {
+  width: 120px;
+  height: 62px;
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  z-index: 100;
+}
+.cart-gopay-btn a.done {
+  background: #e43a3d;
+
+}
+.cart-gopay-btn {
+  width: 120px;
+  height: 62px;
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  z-index: 100;
+}
+.cart-gopay-btn a {
+
+  width: 120px;
+  height: 62px;
+  color: #fff;
+  text-align: center;
+  line-height: 62px;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+
+
+/* 页脚 */
+
+footer {
+  background-color: #f9f9f9;
+}
+
+.topBox {
+  width: 100%;
+  background-color: #333;
+}
+
+.footerTop {
+  margin: 0 auto;
+  height: 84px;
+  border-bottom: 1px solid #494949;
+}
+
+.footerBottom {
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 30px 0 60px;
+}
+
+.footerTop .footerContact {
+  float: left;
+  height: 40px;
+  line-height: 40px;
+  padding: 22px 0px;
+}
+
+.footerContact i {
+  float: left;
+  display: block;
+  width: 40px;
+  height: 40px;
+  margin-right: 18px;
+  background: url(../images/public-24.png)no-repeat;
+  background-position: -144px -22px;
+}
+
+.footerContact b {
+  float: left;
+  font-size: 24px;
+  color: #c00;
+  margin-right: 25px;
+}
+
+.footerContact span {
+  float: left;
+  display: block;
+  font-size: 14px;
+  color: #fff;
+  margin-right: 8px;
+  line-height: 40px;
+}
+
+.footerTop .footerTopRight {
+  float: right;
+  height: 32px;
+  padding: 26px 0;
+}
+
+.footerTopRight .ftRight-tit {
+  float: left;
+  line-height: 32px;
+  color: rgb(255, 255, 255);
+  padding-right: 10px;
+}
+
+.footerTopRight .ftRight-form {
+  float: left;
+  width: 240px;
+  height: 30px;
+  border: 1px solid #494949;
+  position: relative;
+  z-index: 99;
+}
+
+.footerTopRight .ftRight-form input {
+  width: 190px;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 6px;
+  background: 0;
+  border: 0;
+  float: left;
+  color: #fff;
+  outline: 0;
+}
+
+.footerTopRight .ftRight-form span {
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+  color: #999;
+  position: absolute;
+  left: 6px;
+  top: 0;
+}
+
+.footerTopRight .ftRight-form i {
+  display: block;
+  width: 22px;
+  height: 18px;
+  background-position: -133px 0;
+  margin: 6px 0 0 10px;
+  cursor: pointer;
+  float: left;
+}
+
+.footerBottom {
+  overflow: hidden;
+  padding: 30px 0 60px;
+}
+
+.footerBottom ul li {
+  float: left;
+  padding: 10px;
+  margin-right: 80px;
+}
+
+.footerBottom ul li h3 {
+  color: #fff;
+}
+
+.footerBottom ul li span {
+  float: left;
+  display: block;
+  padding-left: 8px;
+  padding-bottom: 8px;
+}
+
+.footerBottom ul li i {
+  float: left;
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  background: url(../images/public-24.png)no-repeat 0 -131px;
+}
+
+.footerBottom ul li p {
+  padding-left: 35px;
+  color: #ccc;
+  line-height: 30px;
+}
+
+.footerBottom .liz {
+  margin: 0;
+  color: #fff;
+}
+
+.footerBottom .liz span {
+  padding-top: 5px;
+}
+
+.footerBottom ul li div {
+  height: 40px;
+}
+
+.footerBottom .rightFont1 {
+  float: left;
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  background: url(../images/public-24.png)no-repeat -140px -74px;
+}
+
+.footerBottom .rightFont2 {
+  float: left;
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  background: url(../images/public-24.png)no-repeat -103px -74px;
+}
+
+.bottomBox {
+  margin-top: 20px;
+}
+
+.bottomBoxLeft {
+  float: left;
+  height: 200px;
+  width: 780px;
+}
+
+.bottomBoxRight {
+  width: 340px;
+  height: 200px;
+  float: left;
+}
+
+.bottomBoxLeft p {
+  padding: 10px;
+  color: #999;
+  height: 16px;
+}
+
+.bottomBoxLeft .yz {
+  height: 40px;
+}
+
+.bottomBoxLeft p span {
+  display: block;
+  float: left;
+  margin-right: 10px;
+}
+
+.bottomBoxLeft .xp {
+  float: none;
+}
+
+.bottomBoxRight p {
+  width: 100px;
+  height: 100px;
+  padding-top: 10px;
+}
+
+.bottomBoxRight p img {
+  width: 100%;
+  height: 100%;
+}
+
+.bottomBoxRight div {
+  float: left;
+  margin-right: 40px;
+  margin-top: 30px;
+  text-align: center;
+}

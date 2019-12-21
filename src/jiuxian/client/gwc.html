@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="js/jquery-3.4.1.js"></script>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/gwc.css">
+  <script src="js/carts.js"></script>
+</head>
+
+<body>
+  <div class="topHeaderWrap">
+    <div class="topHeader">
+      <div class="topCollect">
+        <ul>
+          <li name="">
+            <div class="topLoginBox"><span><a href="javascript:;" class="loginNow">Hi 请登录</a><a style="padding:0 3px"
+                  href="javascript:;" class="regNow">免费注册</a></span><i></i></div>
+          </li>
+        </ul>
+      </div>
+      <div class="topRight">
+        <ul>
+          <li><a class="myOrder" target="_blank" href="#">我的订单</a></li>
+          <li><a class="userCenter" target="_blank" href="#">我的酒仙网</a><i></i></li>
+          <li class="hotTel"><i></i><span>客服热线</span><strong>400-617-9999</strong></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="midHeader">
+    <div class="midHeaderBox">
+      <div class="jxwLogo">
+        <p style="background:url(http://img06.jiuxian.com/bill/2014/1226/a347f6723d3141fd9b9b9d464eff6fc7.png) no-repeat;"
+          class="jxwIndex"><a href="http://www.jiuxian.com"></a></p>
+      </div>
+      <div class="bayProcess">
+        <div class="proPic"></div>
+        <div class="proTex"><span class="on">我的购物车</span><span class="on2">确认订单信息</span><span class="on3">成功提交订单</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- gwc -->
+  <div class="cartMain">
+    <div id="cart_container">
+      <div class="f-Prompt"><i class="cartIcon"></i><span>温馨提示：自营商品实付满100元免运费，偏远地区满500免运费</span></div>
+      <div class="cart-t">
+        <div class="cart-filter-bar">
+          <div class="my-cart-tit">我的购物车<span></span></div>
+          <div class="areaBox" id="_shdz">
+            <a href="javascript:;" class="selectArea"><b pid="2">北京</b><b pid="52">北京市</b><b pid="500">东城区</b><i
+                class="cartIcon"></i></a>
+          </div>
+        </div>
+        <div class="cart-thead">
+          <div class="cTab-tr cart-checkbox">
+            <label class="check-all checkbox-checked "><i class="cartIcon"></i><input name="" type="checkbox"
+                value=""></label>
+            <span class="checkAllText">全选</span>
+          </div>
+          <div class="cTab-tr cart-goods">商品信息</div>
+          <div class="cTab-tr cart-price">单价</div>
+          <div class="cTab-tr cart-gold">送金币</div>
+          <div class="cTab-tr cart-quantity">数量</div>
+          <div class="cTab-tr cart-subtotal">小计</div>
+          <div class="cTab-tr cart-operating">操作</div>
+        </div>
+        <div class="cart-tbody">
+          <div class="gwclist">
+            <div class="gwclist-shop">
+              <div class="news">
+                <div class="dx checkbox">
+                  <label for=""> <input type="text" type="checkbox"></label>
+                </div>
+                <div class="dx shop_info">
+                  <div class="shop_img">
+                    <a href="">
+                      <img src="https://img09.jiuxian.com/2019/0705/e33b3db1480644b79cc10265aeb6f6574.jpg" width="80"
+                        height="80">
+                    </a>
+                    <div class="shop_name">
+                      <a href="" target="_blank">
+                        【先领取津贴再下单】52°酒鬼酒珍藏特酿500ml+48°湘泉牌老湘泉125ml
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="dx shop_price">
+                  <h6>￥256</h6>
+                </div>
+                <div class="dx shop_jb">
+                  <h6>114金币</h6>
+                </div>
+                <div class="dx shop_add">
+                  <i></i>
+                  <input type="text" value="1">
+                  <i></i>
+                </div>
+                <div class="dx shop_xj">
+                  <h6>￥256</h6>
+                </div>
+                <div class="dx shop_del">
+                  <h6>删除</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cart-gopay-bottom">
+        <div class="cart-count">
+          <div class="cart-count-total"><span class="pieces">已选商品<em>1</em>件</span><span
+              class="total">总价（不含运费）：<em>￥229.00</em></span></div>
+          <div class="cart-count-offer"><span>活动优惠：<em>￥0.00</em></span><span>赠送金币：<em>114</em>个</span></div>
+        </div>
+
+        <div class="cart-gopay-btn"><a href="javascript:;" class="done" style="display:inherit">去结算</a></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 尾部 -->
+  <footer>
+    <div class="topBox">
+      <div class="footerTop">
+        <div class="footerContact">
+          <i class="publicIcon"></i>
+          <b>400-617-9999</b>
+          <span>客服热线</span>
+          <span>9:00-23:00</span>
+          <span>贴心服务</span>
+        </div>
+        <div class="footerTopRight">
+          <div class="ftRight-tit">优惠促销早知道</div>
+          <div class="ftRight-form">
+            <input id="subscribe_email" type="text">
+            <span>请输入您的邮箱地址</span>
+            <i class="publicIcon" id="subscribe_but"></i>
+          </div>
+        </div>
+      </div>
+      <div class="footerBottom">
+        <ul>
+          <li>
+            <h3>
+              <i></i>
+              <span>新手入门</span>
+            </h3>
+            <p>购物保障</p>
+            <p>服务协议</p>
+            <p>发票说明</p>
+          </li>
+          <li>
+            <h3>
+              <i></i>
+              <span>新手入门</span>
+            </h3>
+            <p>购物保障</p>
+            <p>服务协议</p>
+            <p>发票说明</p>
+          </li>
+          <li>
+            <h3>
+              <i></i>
+              <span>新手入门</span>
+            </h3>
+            <p>购物保障</p>
+            <p>服务协议</p>
+            <p>发票说明</p>
+          </li>
+          <li>
+            <h3>
+              <i></i>
+              <span>新手入门</span>
+            </h3>
+            <p>购物保障</p>
+            <p>服务协议</p>
+            <p>发票说明</p>
+          </li>
+          <li>
+            <h3>
+              <i></i>
+              <span>新手入门</span>
+            </h3>
+            <p>购物保障</p>
+            <p>服务协议</p>
+            <p>发票说明</p>
+          </li>
+          <li class="liz">
+            <div>
+              <i class="rightFont1"></i>
+              <span>酒仙新浪微博</span>
+            </div>
+            <div>
+              <i class="rightFont2"></i>
+              <span>酒仙微信</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottomBox">
+      <div class="bottomBoxLeft">
+        <p>公司简介|管理团队|媒体报道|联系我们|友情链接|网站地图|品牌大全</p>
+        <p>北京酒仙网络科技有限公司◎酒仙网2011jiuxian.com All Rights Reserved 京ICP备17043395号京公网安备1101050188221</p>
+        <p>酒仙网白酒1酒仙网葡萄酒|开放平台招商|酒仙网团购|更多</p>
+        <p>统一社会信用代码91110302306646672B食品流通许可证编号JY11131010328793京食药网食备201910019</p>
+        <p>地址：北京市北京经济技术开发区经海五路58号院8幢4层
+        </p>
+        <p class="yz"><span><a href=""><img src="https://rr.knet.cn/static/images/logo/cnnic.png" alt=""></a></span>
+          <span><a href=""><img src="http://misc.jiuxian.com/img/newIndexImg/copyBot03.jpg" alt=""></a></span></p>
+        <p class="xp">购买前请确认达到法定饮酒年龄！酒仙网不销售任何含酒精产品给18岁以下人士！</p>
+      </div>
+      <div class="bottomBoxRight">
+        <div>
+          <p>
+            <img src="http://misc.jiuxian.com/img/newIndexImg/jxPho-code.jpg" alt="">
+
+          </p>
+          <p>手机酒仙网</p>
+        </div>
+        <div>
+          <p>
+            <img src="http://misc.jiuxian.com/img/newIndexImg/jx-wxgzh.png" alt="">
+
+          </p>
+          <p>微信公众号</p>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

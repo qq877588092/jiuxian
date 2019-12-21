@@ -205,9 +205,7 @@
 			fontSize: 26,
 			length: 4,
 		});
-		captcha2.draw(document.querySelector('#captcha2'), r => {
-			console.log(r, '验证码2');
-		});
+		captcha2.draw(document.querySelector('#captcha2'), r => {});
 
 		//右上下拉菜单
 		$(".head-nav").mouseover(function () {
@@ -267,12 +265,11 @@
 			})
 		}
 
-
 		/* 给立即登录按钮添加点击事件，当点击该按钮的时候获取用户名和密码，发请求给服务器，等到服务器返回的结果(登录成功 | 登录失败[帐号不存在？密码不正确]) */
 		$(".loginBtn").click(function () {
-			let username = $(".userName").val();
+			let phone = $(".userName").val();
 			let password = $(".userPwd1").val();
-			
+
 			if ($(".userYzm1").val().toUpperCase() != code) {
 				//验证码刷新
 				let captcha1 = new Captcha({
@@ -283,25 +280,20 @@
 				});
 				captcha1.draw(document.querySelector('#captcha1'), r => {
 					console.log(r, '验证码1');
-					code = r.toUpperCase();	
+					code = r.toUpperCase();
 				});
-		
-				
-
 				$(".yzmError").show();
 				$(".yzmError").parents(".loginName").addClass("activeColor");
 			} else {
-				console.log("==================");
-
 				$(".yzmError").hide();
 				$(".yzmError").parents(".loginName").removeClass("activeColor");
 
 				/* 验证码通过，发请求登录 */
 				$.ajax({
 					type: "post",
-					url: "http://127.0.0.1/code/src/jiuxian/server/user.php",
+					url: "http://127.0.0.1/code/jiuxian/src/jiuxian/server/user.php",
 					data: {
-						username,
+						phone,
 						password
 					},
 					dataType: "json",
@@ -309,7 +301,10 @@
 						console.log(response);
 						/* 检查结果：成功 ？失败 */
 						if (response.status == "success") {
-							window.location.href = "https://www.jiuxian.com/";
+							localStorage.phone =response[0].phone;
+							localStorage.id = response[0].id;
+							window.location.href = "http://127.0.0.1/code/jiuxian/src/jiuxian/client/gwc.html";
+
 						} else {
 							$(".user-pawd-error").show();
 						}

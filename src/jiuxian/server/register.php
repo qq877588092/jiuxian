@@ -22,7 +22,7 @@ $password = $_REQUEST["password"];
 $phone = $_REQUEST["phone"];
 
 # 连接数据库： 第一个参数是地址、管理员名字、密码空、你创建的数据库名字
-$db = mysqli_connect("127.0.0.1","root","","jiuxian");
+$db = mysqli_connect("127.0.0.1","root","","jiuxianwang");
 // print_r($db);
 
 //数据库语句

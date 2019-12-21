@@ -50,8 +50,7 @@ class Shopping {
                   <a href="#">+</a>
                 </div>
                 <div class="shopControlRight">
-    
-                  <a href="">加入购物车</a>
+                  <a href="#">加入购物车</a>
                   <i></i>
                 </div>
               </div>
@@ -122,3 +121,35 @@ $.ajax({
 
   }
 });
+
+/* 实现点击添加商品到购物车的功能 */
+$(".shopControlRight").click(function () {
+  console.log("++++++++");
+  
+  /* 检查是否已经登录 ，如果没有登录那就跳转到登录页面*/
+  if (!localStorage.phone) {
+    window.location.href = "http://127.0.0.1/code/jiuxian/src/jiuxian/client/login.html";
+  }
+
+  /* 获取当前商品的ID */
+  // let good_id = $(this).parents("li").data().id;
+  // /* 发送网络请求把当前数据添加到购物车表中 */
+  // /* 数据库表 cart_id  good_id  num isChecked */
+  // /* 添加数据： */
+  // /* 删除数据： */
+  // /* 更新数据： */
+  // $.ajax({
+  //   url: "../server/cart.php",
+  //   data: {
+  //     type: "add",
+  //     good_id: good_id,
+  //     id: localStorage.id
+  //   },
+  //   dataType: "json",
+  //   success: function (response) {
+  //     if (response.status == "success") {
+  //       $(".cart_total").text($(".cart_total").text() * 1 + 1);
+  //     }
+  //   }
+  // });
+})

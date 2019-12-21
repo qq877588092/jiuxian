@@ -1,13 +1,13 @@
 <?php
 # (1) 先链接数据库
-$db = mysqli_connect("127.0.0.1", "root", "", "JK");
+$db = mysqli_connect("127.0.0.1", "root", "", "jiuxianwang");
 // print_r($db);
-$username = $_REQUEST["username"];
+$phone = $_REQUEST["phone"];
 $password = $_REQUEST["password"];
 // print_r($_REQUEST);
 
 # (2) 去数据库中查询看指定的用户名是否存在
-$sql = "SELECT * FROM user WHERE username='$username'" ;
+$sql = "SELECT * FROM user WHERE phone='$phone'" ;
 $result = mysqli_query($db,$sql);//查询数据库
 
 $data = array("status"=>"","data"=>array("msg"=>""));
@@ -18,7 +18,7 @@ if(mysqli_num_rows($result) == 0)
 //   $data["data"]["msg"] = "登录失败，用户名不存在";
 }else{
   # (2-2) 如果用户名存在，接着检查密码
-  $sql2 = "SELECT * FROM user WHERE username='$username'";//查询所有数据
+  $sql2 = "SELECT * FROM user WHERE phone='$phone'";//查询所有数据
   $res = mysqli_query($db,$sql2);
   $data = mysqli_fetch_all($res, MYSQLI_ASSOC);
   $item=$data[0]["password"];
