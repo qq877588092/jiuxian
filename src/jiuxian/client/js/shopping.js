@@ -13,8 +13,10 @@ class Shopping {
   }
   createShop() {
     let html = this.data.map((ele) => {
+      // console.log(ele);
+      //获取id
       return `
-            <li>
+            <li data-id="${ele.good_id}">
             <div class="showBox1" style="display: none;">
             </div>
             <div class="showBox2">
@@ -26,7 +28,7 @@ class Shopping {
               </div>
               <div>
                 <h6>
-                  <a href="">${ele.spanName}</a>
+                  <a href="">${ele.title}</a>
                 </h6>
               </div>
               <div>
@@ -49,12 +51,14 @@ class Shopping {
                   <input type="text" value="1">
                   <a href="#">+</a>
                 </div>
-                <div class="shopControlRight">
-                  <a href="#">加入购物车</a>
-                  <i></i>
-                </div>
+
               </div>
+
             </div>
+            <div class="shopControlRight">
+            <a href="javascript:;">加入购物车</a>
+            <i></i>
+          </div>
           </li>
           `
     })
@@ -122,34 +126,56 @@ $.ajax({
   }
 });
 
+
 /* 实现点击添加商品到购物车的功能 */
-$(".shopControlRight").click(function () {
-  console.log("++++++++");
-  
-  /* 检查是否已经登录 ，如果没有登录那就跳转到登录页面*/
-  if (!localStorage.phone) {
-    window.location.href = "http://127.0.0.1/code/jiuxian/src/jiuxian/client/login.html";
+$(() => {
+  let showText = localStorage.phone ? localStorage.phone + ",欢迎你！" : "请登录";
+  $(".topheadderLeft p").text(showText);
+  if (localStorage.phone) {
+    $(".topheadderLeft a").text("注销");
+  } else {
+    $(".topheadderLeft a").text("登录");
   }
 
-  /* 获取当前商品的ID */
-  // let good_id = $(this).parents("li").data().id;
-  // /* 发送网络请求把当前数据添加到购物车表中 */
-  // /* 数据库表 cart_id  good_id  num isChecked */
-  // /* 添加数据： */
-  // /* 删除数据： */
-  // /* 更新数据： */
-  // $.ajax({
-  //   url: "../server/cart.php",
-  //   data: {
-  //     type: "add",
-  //     good_id: good_id,
-  //     id: localStorage.id
-  //   },
-  //   dataType: "json",
-  //   success: function (response) {
-  //     if (response.status == "success") {
-  //       $(".cart_total").text($(".cart_total").text() * 1 + 1);
-  //     }
-  //   }
-  // });
+  $(".topheadderLeft a").click(function () {
+    if ($(this).text() == "注销") {
+      localStorage.removeItem("phone");
+      localStorage.removeItem("id");
+      window.location.href = "http://127.0.0.1/code/jiuxian/src/jiuxian/client/gwc.html";
+    } else {
+      window.location.href = "http://127.0.0.1/code/jiuxian/src/jiuxian/client/login.html";
+    }
+  })
+
+  $(".shopControlRight a").click(function () {
+    /* 检查是否已经登录 ，如果没有登录那就跳转到登录页面*/
+    if (!localStorage.phone) {
+      window.location.href = "http://127.0.0.1/code/jiuxian/src/jiuxian/client/login.html";
+    }
+    /* 获取当前商品的ID */
+    let good_id = $(this).parent().parent().data().id;
+    console.log($(this).parent().parent().data().id);
+
+    /* 发送网络请求把当前数据添加到购物车表中 */
+    /* 数据库表 cart_id  good_id  num isChecked */
+    /* 添加数据： */
+    /* 删除数据： */
+    /* 更新数据： */
+    $.ajax({
+      url: "http://127.0.0.1/code/jiuxian/src/jiuxian/server/cart.php",
+      data: {
+        type: "add",
+        good_id: good_id,
+        id: localStorage.id
+      },
+      dataType: "json",
+      success: function (response) {
+        console.log(response);
+        
+        if (response.status == "success") {
+          // $(".cart_total").text($(".cart_total").text() * 1 + 1);
+        }
+      }
+    });
+  })
 })

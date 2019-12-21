@@ -78,27 +78,6 @@ class Subpage {
             $(this).children(".showBox1").toggle();
         })
     }
-    //商品详情跳转
-        /* 002-给标签添加点击事件，当点击标签的时候打开详情页 */
-
-        // for (var i = 0, len = oLis.length; i < len; i++) {
-        //     var oLi = oLis[i];
-        //     oLi.index = i; /* 把i保存到标签的身上 */
-        //     oLi.onclick = function () {
-        //         // console.log(this.index);
-        //         /* 003-点击标签的时候先拿到当前标签对应的数据 */
-        //         // var src = this.getElementsByTagName("img")[0].src;
-        //         // var name = this.getElementsByClassName("name")[0].innerText;
-        //         // var price = this.getElementsByClassName("price")[0].innerText;
-
-        //         var o = data[this.index];
-
-        //         /* 004-把对应的数据转换成查询字符串拼接在URL后面 */
-        //         var queryString = `src=${o.src}&name=${o.name}&price=${o.price}`;
-        //         // window.location.href = "./03-detail.html?name=zs&age=18";
-        //         window.location.href = "http://127.0.0.1/code/jiuxian/src/jiuxian/client/dp.html?" + queryString;
-        //     }
-        // }
 
 }
 

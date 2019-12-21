@@ -9,7 +9,7 @@ $page = ($_REQUEST["page"] -1 ) * 30;
 # 02-查询获取数据库所有的数据
 // if($type == 0)
 // {
-  $sql = "SELECT * FROM shopping LIMIT $page, 30";
+  $sql = "SELECT * FROM goods LIMIT $page, 30";
 // }elseif($type == 1){
 //   $sql = "SELECT * FROM shopping ORDER BY price DESC LIMIT $page, 20";
 // }else{

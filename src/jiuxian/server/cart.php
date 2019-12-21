@@ -32,7 +32,7 @@ if($type == "add")
   /* 查询数据库-cart表中所有的数据，并按照店铺来进行分类 */
   // $id = 2;
   $resData = array("status"=>"success","data"=>array());
-  $sql = "SELECT * FROM shopping , user WHERE shopping.id = user.id AND id=$id";
+  $sql = "SELECT cart.*,goods.title,goods.src,goods.shopProId,goods.price FROM cart , goods WHERE cart.good_id = goods.good_id AND id=$id";
   $data = mysqli_fetch_all(mysqli_query($db, $sql), MYSQLI_ASSOC);
   // print_r($data);
   /* 遍历，根据数据来调整结构 */
@@ -41,7 +41,7 @@ if($type == "add")
   $stores = array();
   for ($i = 0; $i < count($data); $i++) {
     /* 获取当前数据的店铺名称 */
-     $currentShopName = $data[$i]["shopProld"];
+     $currentShopName = $data[$i]["shopProId"];
      /* 检查数组中该店铺名称是否存在，如果不存在那么就添加到数组 */
      if(!in_array($currentShopName,$stores))
      {
@@ -56,7 +56,7 @@ if($type == "add")
   // # 把数据处理为指定的格式以便返回
   for ($i = 0; $i < count($data); $i++) {
     /* 获取当前数据的店铺名称 */
-    $currentShopName = $data[$i]["shopProld"];
+    $currentShopName = $data[$i]["shopProId"];
     for ($j = 0; $j < count($res_data["data"]); $j++) {
       if($res_data["data"][$j]["store"] == $currentShopName)
       {
@@ -65,7 +65,9 @@ if($type == "add")
     }
   } 
   echo json_encode($res_data,true);
- }//elseif($type == "update")
+ }
+ 
+//elseif($type == "update")
 // {
 //   $sign = $_REQUEST["flag"];
 //   $good_id = $_REQUEST["good_id"];

@@ -21,70 +21,87 @@ $(()=>{
 
     loadCart();
 
+
+
+    // $.ajax({
+    //     url: "http://127.0.0.1/code/jiuxian/src/jiuxian/server/cart.php",
+    //     data: {id:localStorage.id,type: "get"},
+    //     dataType: "dataType",
+    //     success: function (response) {
+    //         console.log(response);
+            
+    //     }
+    // });
+
+
+
+
     function loadCart() {
-        $(".cartBox").remove();
+        // $(".cartBox").remove();
         $.ajax({ //获取商品数据
             data: { type: "get", id: localStorage.id },
             url: "http://127.0.0.1/code/jiuxian/src/jiuxian/server/cart.php",
             dataType: "json",
             success: function (res) {
-                console.log(res);
-
-                // $(res.data).each((index, ele) => {
-                //     // renderUI(ele);
-                          
-                // })
+                // console.log(res);
+                $(res.data[0]).each((index, ele) => {
+                    // console.log(ele);  
+                    renderUI(ele);    
+                })
             }
         });
     }
 
-    // /* 渲染购物车 */
-    // function renderUI(data) {
-    //     let tmp = data.goods.map(item => {
-    //         return `
-    //         <ul class="order_lists order_item" gid=${item.good_id}>
-    //             <li class="list_chk">
-    //               <input type="checkbox" id="checkbox_${item.good_id}" class="son_check">
-    //               <label for="checkbox_${item.good_id}"></label>
-    //             </li>
-    //             <li class="list_con">
-    //               <div class="list_img"><a href="./detail.html?product/${item.good_id}"><img src=${item.src} alt=""></a></div>
-    //               <div class="list_text"><a href="./detail.html?product/${item.good_id}">${item.title}</a></div>
-    //             </li>
-    //             <li class="list_price">
-    //               <p class="price">￥${item.price}</p>
-    //             </li>
-    //             <li class="list_amount">
-    //               <div class="amount_box">
-    //                 <a href="javascript:;" class="reduce">-</a>
-    //                 <input type="text" value="${item.num}" class="sum">
-    //                 <a href="javascript:;" class="plus">+</a>
-    //               </div>
-    //             </li>
-    //             <li class="list_sum">
-    //               <p class="sum_price" data-price=${item.price}>￥${Math.round(item.price * item.num * 100) / 100}</p>
-    //             </li>
-    //             <li class="list_op">
-    //               <p class="del"><a href="javascript:;" class="delBtn">移除商品</a></p>
-    //             </li>
-    //           </ul>`
-    //     }).join('');
-
-    //     let html = `
-    //             <div class="cartBox">
-    //               <div class="shop_info">
-    //                 <div class="all_check">
-    //                   <input type="checkbox" id="shop_a" class="shopChoice">
-    //                   <label for="shop_a" class="shop"></label>
-    //                 </div>
-    //                 <div class="shop_name">
-    //                   店铺：<a href="">${data.store}</a>
-    //                 </div>
-    //               </div>
-    //               <div class="order_content">${tmp}</div>
-    //             </div>`;
-    //     $(html).insertAfter('.cartMain_hd');
-    // }
+    /* 渲染购物车 */
+    function renderUI(data) {
+        // console.log(data.goods);
+        let html = data.goods.map(item => {
+            return `
+            <div class="cart-tbody">
+          <div class="gwclist">
+            <div class="gwclist-shop">
+              <div class="news">
+                <div class="dx checkbox">
+                  <label for=""> <input type="text" type="checkbox"></label>
+                </div>
+                <div class="dx shop_info">
+                  <div class="shop_img">
+                    <a href="">
+                      <img src=${item.src} width="80"
+                        height="80">
+                    </a>
+                    <div class="shop_name">
+                      <a href="" target="_blank">
+                      ${item.title}
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="dx shop_price">
+                  <h6>${item.price}</h6>
+                </div>
+                <div class="dx shop_jb">
+                  <h6>100金币</h6>
+                </div>
+                <div class="dx shop_add">
+                  <i></i>
+                  <input type="text" value="1">
+                  <i></i>
+                </div>
+                <div class="dx shop_xj">
+                  <h6>${item.price}</h6>
+                </div>
+                <div class="dx shop_del">
+                  <h6>删除</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+            `
+        }).join('');
+        $(".cart-t").append(html);
+    }
 
     // $("body").on("click", "#all", function () {
     //     // $(this).next("label").toggleClass("mark");
