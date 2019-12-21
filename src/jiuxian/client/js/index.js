@@ -90,13 +90,14 @@ $(() => {
     p1.init();
       
     let showText = localStorage.phone ? localStorage.phone + ",欢迎你！" : "请登录";
+    let num=localStorage.num;
     $(".topheadderLeft p").text(showText);
     if (localStorage.phone) {
-        $(".topheadderLeft p").text("注销");
+        $(".topheadderLeft a").text("注销");
     } else {
-        $(".topheadderLeft p").text("登录");
+        $(".topheadderLeft a").text("登录");
     }
-    $(".topheadderLeft").click(function () {
+    $(".topheadderLeft a").click(function () {
         if ($(this).text() == "注销") {
             localStorage.removeItem("phone");
             localStorage.removeItem("id");
