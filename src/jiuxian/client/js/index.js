@@ -89,5 +89,21 @@ $(() => {
     ]);
     p1.init();
       
+    let showText = localStorage.phone ? localStorage.phone + ",欢迎你！" : "请登录";
+    $(".topheadderLeft p").text(showText);
+    if (localStorage.phone) {
+        $(".topheadderLeft p").text("注销");
+    } else {
+        $(".topheadderLeft p").text("登录");
+    }
+    $(".topheadderLeft").click(function () {
+        if ($(this).text() == "注销") {
+            localStorage.removeItem("phone");
+            localStorage.removeItem("id");
+            window.location.href = "http://127.0.0.1/code/jiuxian/src/jiuxian/client/gwc.html";
+        } else {
+            window.location.href = "http://127.0.0.1/code/jiuxian/src/jiuxian/client/login.html";
+        }
+    })
 
 })
