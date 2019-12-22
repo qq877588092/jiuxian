@@ -87,13 +87,13 @@ $(() => {
     ]);
     p1.init();
       
-    let showText = localStorage.phone ? localStorage.phone + ",欢迎你！" : "请登录";
+    let showText = localStorage.phone ? localStorage.phone + ",欢迎来酒仙网！" : "请登录";
     let num=localStorage.num;
     $(".topheadderLeft p").text(showText);
     if (localStorage.phone) {
         $(".topheadderLeft a").text("注销");
     } else {
-        $(".topheadderLeft a").text("登录");
+        $(".topheadderLeft a").text("免费注册");
     }
     $(".topheadderLeft a").click(function () {
         if ($(this).text() == "注销") {
