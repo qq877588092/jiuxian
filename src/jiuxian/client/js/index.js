@@ -16,11 +16,11 @@ class Subpage {
     createBox() {
         var htmlLi = this.data.map((ele, index) => {
             var html2 = ele.leftName2.map((item, index) => {
-                return ` <a href="">${item}</a>`
+                return ` <a href="http://127.0.0.1/code/jiuxian/src/jiuxian/client/subpage.html">${item}</a>`
             }).join("");
             return `
             <li>
-                <h3 class="sortCon"><i></i><a href="">${ele.leftName1}</a></h3>
+                <h3 class="sortCon"><i></i><a href="http://127.0.0.1/code/jiuxian/src/jiuxian/client/subpage.html">${ele.leftName1}</a></h3>
                 <p>
                    ${html2}
                 </p>
@@ -32,7 +32,7 @@ class Subpage {
     createMenu() {
         var html = this.data.map((ele, index) => {
             var html3 = ele.rightName2.map((item, index) => {
-                return `<p class="clearfix"><a href="#">${item}</a><s>|</s></p>`
+                return `<p class="clearfix"><a href="http://127.0.0.1/code/jiuxian/src/jiuxian/client/subpage.html">${item}</a><s>|</s></p>`
             }).join("");
             return `
             <div class="menuBox" style="display: none;">
@@ -45,7 +45,7 @@ class Subpage {
             </div>
           </div>
           <div class="menuFoc">
-            <a href="#"><img title="" alt="" src=${ele.src}>
+            <a href="http://127.0.0.1/code/jiuxian/src/jiuxian/client/subpage.html"><img title="" alt="" src=${ele.src}>
             </a>
           </div>
           </div>
@@ -56,8 +56,6 @@ class Subpage {
     //鼠标移入显示侧边栏
     createEvent() {
         $(".sortBox li").hover(function () {
-            console.log("++++++++++++");
-            
             $(this).addClass("liarticlebg").siblings().removeClass("liarticlebg");
             $(this).addClass("borderLi").siblings().removeClass("borderLi");
             $(this).parent().siblings(".menuBox").eq($(this).index()).show().siblings(".menuBox").hide();
@@ -101,9 +99,9 @@ $(() => {
         if ($(this).text() == "注销") {
             localStorage.removeItem("phone");
             localStorage.removeItem("id");
-            window.location.href = "http://127.0.0.1/code/jiuxian/src/jiuxian/client/gwc.html";
+            window.location.href="http://127.0.0.1/code/jiuxian/src/jiuxian/client/gwc.html";
         } else {
-            window.location.href = "http://127.0.0.1/code/jiuxian/src/jiuxian/client/login.html";
+            window.location.href="http://127.0.0.1/code/jiuxian/src/jiuxian/client/login.html";
         }
     })
 
