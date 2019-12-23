@@ -4,17 +4,22 @@ $db = mysqli_connect("127.0.0.1", "root", "", "jiuxianwang");
 
 # 获取参数
 $page = ($_REQUEST["page"] -1 ) * 30;
-// $type = $_REQUEST["sortType"];
+$type = $_REQUEST["sortType"];
 
 # 02-查询获取数据库所有的数据
-// if($type == 0)
-// {
+if($type == 0)
+{
   $sql = "SELECT * FROM goods LIMIT $page, 30";
-// }elseif($type == 1){
-//   $sql = "SELECT * FROM shopping ORDER BY price DESC LIMIT $page, 20";
+}// elseif($type == 1){
+//   $sql = "SELECT * FROM goods ORDER BY price DESC LIMIT $page, 30";
 // }else{
-//   $sql = "SELECT * FROM shopping ORDER BY price ASC LIMIT $page, 20";
+//   $sql = "SELECT * FROM goods ORDER BY price ASC LIMIT $page, 30";
 // }
+elseif($type == 1){
+  $sql = "SELECT * FROM goods ORDER BY price DESC LIMIT $page, 30";
+}elseif($type == 2){
+  $sql = "SELECT * FROM  `goods` ORDER BY  `goods`.`judge` ASC LIMIT 0 , 30";
+}
 
 $result = mysqli_query($db,$sql);
 # 03-把数据库中的获取所有数据转换为JSON返回

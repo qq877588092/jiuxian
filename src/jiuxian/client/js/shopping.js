@@ -79,11 +79,11 @@ class Shopping {
 
 }
 
-function getMysql(index) {
+function getMysql(page, type) {
   $.ajax({
     type: "get",
     url: "http://127.0.0.1/code/jiuxian/src/jiuxian/server/getMysql.php",
-    data: "page=" + index,
+    data: `page=${page}&sortType=${type}`,
     dataType: "json",
     success: function (response) {
       let p1 = new Shopping(response);
@@ -93,7 +93,7 @@ function getMysql(index) {
 }
 
 //页面刷新获取第一页数据
-getMysql(1);
+getMysql(1, 0);
 
 //后台获取页码生成标签
 $.ajax({
@@ -120,11 +120,21 @@ $.ajax({
     $(".fanye .number").click(function () {
       $(this).addClass("on").siblings().removeClass("on");
       //发请求获取数据
-      getMysql($(this).index());
+      getMysql($(this).index(), 0);
     })
-
   }
+
 });
+
+$(() => {
+  /* 处理排序 */
+  console.log($(".nofollow"));
+  $(".tab").click(function () {
+    console.log($(this).index());
+    getMysql(1, $(this).index());
+  })
+})
+
 
 
 /* 实现点击添加商品到购物车的功能 */
@@ -171,7 +181,7 @@ $(() => {
       dataType: "json",
       success: function (response) {
         console.log(response);
-        
+
         if (response.status == "success") {
           // $(".cart_total").text($(".cart_total").text() * 1 + 1);
         }
