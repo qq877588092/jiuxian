@@ -489,6 +489,30 @@ body {
   min-height: 600px;
 
 }
+.mainBox{
+  position: relative;
+}
+.navLift {
+  position: fixed;
+  text-align: center;
+  left: 50%;
+  top: 300px;
+  margin-left: -650px;
+}
+
+.navLift li {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  color: #fff;
+  border-radius: 15px;
+  margin-bottom: 3px;
+  background: #f1f1f1;
+}
+
+.navLiftActive {
+  background-color: #F6B342 !important;
+}
 
 .Lay_3 {
   background: #fff;
@@ -545,14 +569,16 @@ body {
   font-family: "å¾®è½¯é›…é»‘";
   margin-left: 10px;
 }
-.spiritWrap{
+
+.spiritWrap {
   border-left: 1px solid #ececec;
-    border-right: 1px solid #ececec;
-    border-bottom: 1px solid #ececec;
+  border-right: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
   border-top: 2px solid #c94b56;
   height: 485px;
   overflow: hidden;
 }
+
 .rightMenu {
   float: right;
   margin-left: 50px;
@@ -817,13 +843,15 @@ body {
   font-weight: normal;
   color: #CD0100;
 }
-.bannerBoxmin{
+
+.bannerBoxmin {
   background-color: red;
   width: 210px;
   height: 485px;
   float: left;
 }
-.spiritList{
+
+.spiritList {
 
   width: 988px;
   float: right;
@@ -831,37 +859,148 @@ body {
   overflow: hidden;
   position: relative;
 }
-.spiritList{ float:right; height:485px; overflow:hidden; position:relative;}
-.spiritList li{ float:left; width:196px; height:232px; border-bottom:1px solid #ececec; border-left:1px solid #ececec; position:relative; padding-top:10px; z-index:1;}
-.spiritListPic{ width:160px; margin:0 auto; position:relative; z-index:1; }
-.spiritListTit{ width:160px; padding:0 18px; height:36px; overflow:hidden; margin-top:5px;}
-.spiritListTit a{display: block;width: 100%;height: 18px;line-height: 18px;font-size: 12px;}
-.spiritListPrice{width:178px; padding:0 0 0 18px; height:18px; overflow:hidden; line-height:18px; white-space:nowrap;}
-.spiritListPrice strong{ font-size:12px; font-weight:normal; font-family:"å¾®è½¯é›…é»‘"; color:#CD0100; display:inline; vertical-align:middle;}
-.topTenWrap{ height:161px; border-left:1px solid #ececec; border-right:1px solid #ececec; border-bottom:1px solid #ececec;}
-.hotWordBox{ float: left; width:186px; border-right:1px solid #ececec; background:#f9f9f9; height:131px; padding:20px 10px 10px 14px;}
+
+.spiritList {
+  float: right;
+  height: 485px;
+  overflow: hidden;
+  position: relative;
+}
+
+.spiritList li {
+  float: left;
+  width: 196px;
+  height: 232px;
+  border-bottom: 1px solid #ececec;
+  border-left: 1px solid #ececec;
+  position: relative;
+  padding-top: 10px;
+  z-index: 1;
+}
+
+.spiritListPic {
+  width: 160px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.spiritListTit {
+  width: 160px;
+  padding: 0 18px;
+  height: 36px;
+  overflow: hidden;
+  margin-top: 5px;
+}
+
+.spiritListTit a {
+  display: block;
+  width: 100%;
+  height: 18px;
+  line-height: 18px;
+  font-size: 12px;
+}
+
+.spiritListPrice {
+  width: 178px;
+  padding: 0 0 0 18px;
+  height: 18px;
+  overflow: hidden;
+  line-height: 18px;
+  white-space: nowrap;
+}
+
+.spiritListPrice strong {
+  font-size: 12px;
+  font-weight: normal;
+  font-family: "å¾®è½¯é›…é»‘";
+  color: #CD0100;
+  display: inline;
+  vertical-align: middle;
+}
+
+.topTenWrap {
+  height: 161px;
+  border-left: 1px solid #ececec;
+  border-right: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
+}
+
+.hotWordBox {
+  float: left;
+  width: 186px;
+  border-right: 1px solid #ececec;
+  background: #f9f9f9;
+  height: 131px;
+  padding: 20px 10px 10px 14px;
+}
+
 /* 楼层悬浮样式 */
-.fixDiv{
+.fixDiv {
   position: fixed;
-	width:40px;
-	height:205px;
-	left:50%;
-	top:800px;
+  width: 40px;
+  height: 205px;
+  left: 50%;
+  top: 800px;
 
-	}
-.fixDiv div{ font-size:12px;  text-align:center; }
-.fixDiv a{ width:30px; height:30px; position:absolute; left:0; top:0; color:#fff; font-size:12px; text-align:center; border-radius:30px; line-height:30px; text-decoration:none;}
-.fixDiv .floorOneOn{ background:#d43d4e;z-index:1;}
-.fixDiv .floorTwoOn{ background:#c2782f;z-index:1;}
-.fixDiv .floorThreeOn{ background:#296693;z-index:1;}
-.fixDiv .floorFourOn{ background:#6c9d0e;z-index:1;}
-.fixDiv .floorFiveOn{ background:#fe7a65;z-index:1;}
+}
 
+.fixDiv div {
+  font-size: 12px;
+  text-align: center;
+}
 
+.fixDiv a {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #fff;
+  font-size: 12px;
+  text-align: center;
+  border-radius: 30px;
+  line-height: 30px;
+  text-decoration: none;
+}
 
+.fixDiv .floorOneOn {
+  background: #d43d4e;
+  z-index: 1;
+}
 
+.fixDiv .floorTwoOn {
+  background: #c2782f;
+  z-index: 1;
+}
 
+.fixDiv .floorThreeOn {
+  background: #296693;
+  z-index: 1;
+}
 
+.fixDiv .floorFourOn {
+  background: #6c9d0e;
+  z-index: 1;
+}
+
+.fixDiv .floorFiveOn {
+  background: #fe7a65;
+  z-index: 1;
+}
+.floor{
+  position: relative;
+}
+.floor i {
+  display: block;
+  width: 15px;
+  height: 10px;
+  position: absolute;
+  left: 8px;
+  top: 10px;
+  background: url(../images/newIndexIcon-24.png) no-repeat;
+  background-position: -74px -190px;
+}
 
 
 /* 页脚 */

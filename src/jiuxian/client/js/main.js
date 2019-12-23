@@ -11,6 +11,7 @@ class MainBox {
     this.createMain();
     this.toggleShop();
     this.smallBanner();
+    this.floorEle();
   }
   //创建main标签
   createMain() {
@@ -143,7 +144,6 @@ class MainBox {
         }
       }).join("");
 
-
       return `
             <div class="shoppingBox main1 Lay_5 mt10 whiteWine news">
             <div class="titlebox">
@@ -203,6 +203,13 @@ class MainBox {
 
     }).join("")
     $(".mainBox").append(html);
+
+    var navLi = this.data.map((ele, index) => {
+      return `
+      <li class="${index==0?"navLiftActive":""}">${index+1}</li>`
+    }).join("")
+    navLi += `<li class="floor"><i></i></li>`;
+    $(".navLift").append(navLi);
   }
   //点击切换热销商品
   toggleShop() {
@@ -227,21 +234,58 @@ class MainBox {
     $(".delBox").remove();
   }
   //楼层电梯
-  // floorEle() {
-  //   $(() => {
-  //     //获取内容盒子距离窗口顶部距离
-  //     let mainTop = $(".smallImg").offset().top;
-  //     $(window).scroll(function () {
-  //       if ($(document).scrollTop() >= mainTop) {
-  //         $(".fixDiv").show(1000); 
-  //       } else {
-  //         $(".fixDiv").hide(2000);
-  //       }
+  floorEle() {
+    $(() => {
+      //获取楼层盒子距离窗口顶部距离
+      let mainTop = $("a[name='home_you10']").offset().top;
+      //监听页面滚动 
+      $(window).scroll(function () {
+        // console.log($(document).scrollTop());
+        //判断滚动条距离大于或等于楼层距离时显示导航条
+        if ($(document).scrollTop() >= mainTop) {
+          $(".navLift").fadeIn()
+        } else {
+          $(".navLift").fadeOut();
+        }
+        //滚动到对应楼层让左侧电梯显示楼层号
+        //循环楼层获取对应top值
+        $(".shoppingBox").each(function (index, ele) {
+          //判断垂直滚动条距离大于等于楼层top值时让左侧电梯盒子更换背景色显示楼层号 
+          // console.log($(ele).height()/2);
+          //获取当前元素高度一半加上top的值，精确定位
+          let height = $(ele).offset().top - $(ele).height() / 1.5;
+          if ($(document).scrollTop() >= height) {
+            $(ele).siblings(".navLift").children("li").eq(index).addClass("navLiftActive").siblings().removeClass("navLiftActive");
+          }
+        })
+      })
 
-  //     });
-  //   })
-  // }
+      //点击跳转对应楼层
+      $(".navLift li").click(function () {
+        // console.log($(this).index());
+        // console.log($(".shoppingBox").eq($(this).index()).offset().top);
+        //点击判断li是否为返回顶部   
+        if ($(this).index()  == $(".navLift li").length - 1) {
+          //设置滚动条位置
+          $("body,html").stop().animate({
+            scrollTop: 0
+            //scrollTop() 方法返回或设置匹配元素的滚动条的垂直位置。
+          })
+        } else {
+          //获取点击对应楼层的top值
+          let boxTop = $(".shoppingBox").eq($(this).index()).offset().top - $(".shoppingBox").height() / 4;
+          //设置滚动条位置
+          $("body,html").stop().animate({
+            scrollTop: boxTop
+            //scrollTop() 方法返回或设置匹配元素的滚动条的垂直位置。
+          })
+          //点击更换楼层背景色
+          $(this).addClass("navLiftActive").siblings().removeClass("navLiftActive");
+        }
 
+      })
+    })
+  }
 }
 
 $.ajax({
