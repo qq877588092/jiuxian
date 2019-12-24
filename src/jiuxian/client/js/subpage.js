@@ -78,7 +78,6 @@ class Subpage {
             $(this).children(".showBox1").toggle();
         })
     }
-
 }
 
 $.ajax({
