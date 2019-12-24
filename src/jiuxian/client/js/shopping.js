@@ -79,11 +79,11 @@ class Shopping {
 
 }
 
-function getMysql(page, type) {
+function getMysql(page, type, i) {
   $.ajax({
     type: "get",
     url: "http://127.0.0.1/code/jiuxian/src/jiuxian/server/getMysql.php",
-    data: `page=${page}&sortType=${type}`,
+    data: `page=${page}&sortType=${type}&i=${i}`,
     dataType: "json",
     success: function (response) {
       let p1 = new Shopping(response);
@@ -93,7 +93,7 @@ function getMysql(page, type) {
 }
 
 //页面刷新获取第一页数据
-getMysql(1, 0);
+getMysql(1);
 
 //后台获取页码生成标签
 $.ajax({
@@ -120,7 +120,7 @@ $.ajax({
     $(".fanye .number").click(function () {
       $(this).addClass("on").siblings().removeClass("on");
       //发请求获取数据
-      getMysql($(this).index(), 0);
+      getMysql($(this).index());
     })
   }
 
@@ -128,10 +128,22 @@ $.ajax({
 
 $(() => {
   /* 处理排序 */
-  console.log($(".nofollow"));
+  var k = 1;
+  //定义一个变量点击1次排高，第二次排低
   $(".tab").click(function () {
-    console.log($(this).index());
-    getMysql(1, $(this).index());
+    if (k == 1) {
+      console.log($(this).index());
+      getMysql(1, $(this).index(), k);
+      k = 2;
+    } else {
+      console.log($(this).index());
+      getMysql(1, $(this).index(), k);
+      k = 1;
+    }
+    $(this).addClass("bgColor").siblings().removeClass("bgColor");
+    console.log($(this).children("a").children("i"));
+    
+    $(this).children("a").children("i").toggleClass("xlbgImg");
   })
 })
 

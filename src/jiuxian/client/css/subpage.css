@@ -494,6 +494,24 @@ body {
   text-align: center;
   line-height: 36px;
 }
+.bgColor{
+  background-color: #cf010e;
+}
+.tab{
+  position: relative;
+}
+.tab .xl{
+  position: absolute;
+  display: block;
+  width: 9px;
+  height: 10px;
+  background: url(../images/srpIcons.png) no-repeat -65px -108px;
+  top: 13px;
+  left: 50px;
+}
+.xlbgImg{
+  background-position: -86px -108px !important;
+}
 
 .priceArea .left {
   width: 66px;
