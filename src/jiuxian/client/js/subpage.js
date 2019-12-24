@@ -89,6 +89,9 @@ $.ajax({
     success: function (response) {
         var p1 = new Subpage(response);
         p1.init();
-        
+
     }
 });
+
+
+

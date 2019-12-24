@@ -21,23 +21,7 @@ $(() => {
 
   loadCart();
 
-
-
-  // $.ajax({
-  //     url: "http://127.0.0.1/code/jiuxian/src/jiuxian/server/cart.php",
-  //     data: {id:localStorage.id,type: "get"},
-  //     dataType: "dataType",
-  //     success: function (response) {
-  //         console.log(response);
-
-  //     }
-  // });
-
-
-
-
   function loadCart() {
-    // $(".cartBox").remove();
     $.ajax({ //获取商品数据
       data: {
         type: "get",
@@ -46,12 +30,12 @@ $(() => {
       url: "http://127.0.0.1/code/jiuxian/src/jiuxian/server/cart.php",
       dataType: "json",
       success: function (res) {
-        // console.log(res);
-        $(res.data[0]).each((index, ele) => {
-          // console.log(ele);  
+        // console.log(res.data);
+        $(res.data).each((index, ele) => {
+          console.log(ele);
           renderUI(ele);
-          gwc();
         })
+        gwc();
       }
     });
   }
@@ -68,7 +52,7 @@ $(() => {
                   <div class="dx checkbox">
                     <label for=""> <input class="zixuan" type="checkbox"></label>
                   </div>
-                  <div class="dx shop_info">
+                  <div class="dx shop_info" good_id=${item.good_id}>
                     <div class="shop_img">
                       <a href="">
                         <img src=${item.src} width="80"
@@ -89,7 +73,7 @@ $(() => {
                   </div>
                   <div class="dx shop_add">
                     <input type="button" value="-" class="jian">
-                     <input name="num" type="text" value="1" class="val">
+                     <input name="num" type="text" value=${item.num} class="val">
                       <input
                       type="button" value="+" class="jia">
                   </div>
@@ -116,10 +100,12 @@ $(() => {
   //     totalMoney();
   // })
 
-  // $("body").on("click", ".plus,.reduce", function () {
+  // $("body").on("click", ".jia,.jian", function () {
+  //   console.log(this);
+
   //     /* 更改数量|发送网络请求 */
   //     let count;
-  //     if (this.className == "plus") {
+  //     if (this.className == "jia") {
   //         count = $(this).prev().val() * 1 + 1;
   //         $(this).prev().val(count);
   //     } else {
@@ -195,7 +181,7 @@ function gwc() {
       total();
     });
     //子选
-    console.log($(".zixuan"));
+    // console.log($(".zixuan"));
 
     $(".zixuan").click(function () {
       console.log("=========");
@@ -212,6 +198,9 @@ function gwc() {
       vals++;
       $(this).siblings(".val").val(vals);
       price($(this), vals);
+      //发请求改变数量
+      let good_id = $(this).parent().siblings(".shop_info").attr("good_id");
+      updateCartData(this.className, good_id, localStorage.id);
       total();
     })
     //-选
@@ -223,8 +212,11 @@ function gwc() {
       vals--;
       $(this).siblings(".val").val(vals);
       price($(this), vals);
+      //发请求改变数量
+      console.log($(this).parent().siblings(".shop_info").attr("good_id"));
+      let good_id = $(this).parent().siblings(".shop_info").attr("good_id");
+      updateCartData(this.className, good_id, localStorage.id);
       total();
-
     })
     //输入计量
     $(".val").keyup(function () {
@@ -251,5 +243,18 @@ function gwc() {
       $(this).parent().remove();
       total();
     })
+
+    //
+    function updateCartData(flag, good_id, id) {
+      $.ajax({
+        url: "http://127.0.0.1/code/jiuxian/src/jiuxian/server/cart.php",
+        data: {
+          type: "update",
+          flag,
+          id,
+          good_id
+        }
+      });
+    }
   })
 }

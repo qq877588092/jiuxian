@@ -67,21 +67,21 @@ if($type == "add")
   echo json_encode($res_data,true);
  }
  
-//elseif($type == "update")
-// {
-//   $sign = $_REQUEST["flag"];
-//   $good_id = $_REQUEST["good_id"];
-
-//   if($sign == "plus"){
-//     $plusSql = "UPDATE `cart` SET `num`= `num`+ 1 WHERE `good_id`=$good_id AND id=$id";
-//     mysqli_query($db,$plusSql);
-//   }elseif($sign == "reduce"){
-//     $reduceSql = "UPDATE `cart` SET `num`= `num`- 1 WHERE `good_id`=$good_id AND id=$id";
-   
-//     mysqli_query($db,$reduceSql);
-//   }
-//   echo json_encode(array("status"=>"success"), true);
-// }elseif($type == "del")
+elseif($type == "update")
+{
+  $sign = $_REQUEST["flag"];
+  $good_id = $_REQUEST["good_id"];
+  //数量增加
+  if($sign == "jia"){
+    $plusSql = "UPDATE `cart` SET `num`= `num`+ 1 WHERE `good_id`=$good_id AND id=$id";
+    mysqli_query($db,$plusSql);
+    //数量减小
+  }elseif($sign == "jian"){
+    $reduceSql = "UPDATE `cart` SET `num`= `num`- 1 WHERE `good_id`=$good_id AND id=$id";
+    mysqli_query($db,$reduceSql);
+  }
+  echo json_encode(array("status"=>"success"), true);
+}// elseif($type == "del")
 // {
 //   $good_id = $_REQUEST["good_id"];
 //   $delSql = "DELETE FROM `cart` WHERE good_id = $good_id AND id=$id";
