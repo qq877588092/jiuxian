@@ -483,15 +483,87 @@ body {
   background-color: rgb(119, 117, 81, 0.7);
 }
 
+/* 右边购物导航 */
+.right_navBox {
+  width: 35px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #fff;
+  z-index: 88888;
+  box-shadow: 1px 2px 5px #999;
+  text-align: center;
+}
+
+.navBoxCon {
+  position: absolute;
+  width: 35px;
+  top: 30%;
+}
+
+.user-my,.min-gwc{
+  padding: 16px 7px;
+}
+.sc,.kf{
+  padding:16px 4px;
+}
+
+.user-my span {
+  display: block;
+  font-family: "微软雅黑";
+  line-height: 16px;
+  color: #333333;
+  padding: 1px 0 0;
+}
+
+.navBoxCon i {
+  display: inline-block;
+  width: 19px;
+  height: 19px;
+  background: url(../images/public-24.png)no-repeat;
+}
+
+.navBoxCon .i1 {
+  background-position: 0 -163px;
+}
+
+.navBoxCon .i2 {
+  background-position: -40px -163px;
+}
+
+.navBoxCon .i3 {
+  background-position: -120px -163px;
+}
+
+.navBoxCon .i4 {
+  background-position: -45px -331px;
+}
+.gwc-info{
+  width: 270px;
+  height: 100%;
+  background: #fff;
+  border-left: 1px solid #ddd;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  right: 35px;
+  top: 0;
+  z-index: 8888;
+}
+.navBoxCon-bg{
+  background-color:#CC0001;
+}
 
 /* 内容区 */
 .main {
   min-height: 600px;
 
 }
-.mainBox{
+
+.mainBox {
   position: relative;
 }
+
 .navLift {
   position: fixed;
   text-align: center;
@@ -614,7 +686,6 @@ body {
 
 .hotWordBox li {
   width: 186px;
-  font-family: "å¾®è½¯é›…é»‘";
 }
 
 .hotWordBox li h3 {
@@ -988,9 +1059,11 @@ body {
   background: #fe7a65;
   z-index: 1;
 }
-.floor{
+
+.floor {
   position: relative;
 }
+
 .floor i {
   display: block;
   width: 15px;
