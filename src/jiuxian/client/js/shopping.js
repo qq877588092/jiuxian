@@ -192,7 +192,6 @@ $(() => {
       dataType: "json",
       success: function (response) {
         console.log(response);
-
         if (response.status == "success") {
           // $(".cart_total").text($(".cart_total").text() * 1 + 1);
         }

@@ -81,13 +81,13 @@ elseif($type == "update")
     mysqli_query($db,$reduceSql);
   }
   echo json_encode(array("status"=>"success"), true);
-}// elseif($type == "del")
-// {
-//   $good_id = $_REQUEST["good_id"];
-//   $delSql = "DELETE FROM `cart` WHERE good_id = $good_id AND id=$id";
-//   mysqli_query($db, $delSql);
-//   echo json_encode(array("status" => "success"), true);
-// }
+}elseif($type == "del")
+{
+  $good_id = $_REQUEST["good_id"];
+  $delSql = "DELETE FROM `cart` WHERE good_id = $good_id AND id=$id";
+  mysqli_query($db, $delSql);
+  echo json_encode(array("status" => "success"), true);
+}
 
 #   清空操作 $removeSql = "TRUNCATE table `cart` ";
 #   删除操作 $delSql = "DELETE FROM `cart` WHERE good_id = $good_id";

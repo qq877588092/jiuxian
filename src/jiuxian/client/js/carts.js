@@ -32,7 +32,7 @@ $(() => {
       success: function (res) {
         // console.log(res.data);
         $(res.data).each((index, ele) => {
-          console.log(ele);
+          // console.log(ele);
           renderUI(ele);
         })
         gwc();
@@ -170,9 +170,15 @@ $(() => {
   //     $(".total_text").text("￥" + total_price.toFixed(2));
 })
 
+
 //购物车功能
 function gwc() {
   $(() => {
+    $(".price").each((i, ele) => {
+      // console.log(Number($(".val").eq(i).attr("value")));
+      // console.log(Number($(".pic").eq(i).text().slice("1")));
+      $(ele).text("￥"+Number($(".val").eq(i).attr("value")) * Number($(".pic").eq(i).text().slice("1")));
+    })
     //全选
     $(".quanxuan").click(function () {
       console.log("====");
@@ -234,14 +240,29 @@ function gwc() {
     function total() {
       let sum = 0;
       $(".zixuan:checked").parent().parent().siblings(".shop_xj").children(".price").each(function (i, ele) {
-        sum += Number($(ele).text().substr(1));
+        sum += Number($(ele).text().slice(1));
+        console.log(sum);
+        
       })
       $(".total>em").text("¥" + sum.toFixed(2));
     }
     //删除块
-    $(".del").click(function () {
-      $(this).parent().remove();
-      total();
+    $(".shop_del").on("click", "h6", function () {
+      $(this).parents(".cart-tbody").remove();
+      let good_id = $(this).parent().siblings(".shop_info").attr("good_id");
+      $.ajax({
+        url: "http://127.0.0.1/code/jiuxian/src/jiuxian/server/cart.php",
+        data: {
+          type: "del",
+          good_id,
+          id: localStorage.id
+        },
+        dataType: "json",
+        success: function (response) {
+          console.log(response);
+          total();
+        }
+      });
     })
 
     //
