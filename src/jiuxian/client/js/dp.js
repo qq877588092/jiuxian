@@ -17,4 +17,5 @@ $(() => {
     $(".dpBinImg img")[0].src = obj.src;
     $(".comName h1").text(obj.name);
     $(".pri strong").text(obj.price);
+    $(".right img")[0].src = "http://img07.jiuxian.com/2019/0710/12ef7ca49b644a16b55d45b1282413586.jpg";
 })

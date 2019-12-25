@@ -491,6 +491,7 @@ body {
 
 .shopDp {
     border: 1px solid #f2f2f2;
+    position: relative;
 }
 
 /* 商品详情左侧 */

@@ -56,8 +56,8 @@ $(() => {
     //     });
     // })
 
-     /* 发请求获取购物车中商品的数量 */
-     /* 检查登录状态，如果已经登录那么就请求获取购物车的数量 */
+    /* 发请求获取购物车中商品的数量 */
+    /* 检查登录状态，如果已经登录那么就请求获取购物车的数量 */
     if (localStorage.id) {
         $.ajax({
             url: "http://127.0.0.1/code/jiuxian/src/jiuxian/server/getTotalCount.php",
@@ -65,9 +65,15 @@ $(() => {
                 id: localStorage.id
             },
             dataType: "json",
-            success: function({ total }) {
+            success: function ({
+                total
+            }) {
                 // console.log(total);
-                $(".gwc-num").text(`购物车${total}件`);
+                $(".gwc-num i").text(total);
+                $(".productShow ul").on("click","a",function () {
+                    $(".gwc-num i").text(Number($(".gwc-num i").text()) + 1);
+
+                })
             }
         });
     }

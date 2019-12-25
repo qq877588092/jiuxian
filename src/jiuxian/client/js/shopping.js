@@ -168,8 +168,7 @@ $(() => {
       window.location.href = "http://127.0.0.1/code/jiuxian/src/jiuxian/client/login.html";
     }
   })
-
-  $(".shopControlRight a").click(function () {
+  $(".productShow ul").on("click","a",function () {
     /* 检查是否已经登录 ，如果没有登录那就跳转到登录页面*/
     if (!localStorage.phone) {
       window.location.href = "http://127.0.0.1/code/jiuxian/src/jiuxian/client/login.html";
